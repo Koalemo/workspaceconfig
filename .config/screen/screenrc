@@ -1,0 +1,9 @@
+term screen-256color
+altscreen
+
+hardstatus alwayslastline '%{= G}[ %{G}%H %{g}][%= %{= w}%?%-Lw%?%{= R}%n*%f %t%?%{= R}(%u)%?%{= w}%+Lw%?%= %{= g}][ %{y}Load: %l %{g}][%{B}%Y-%m-%d %{W}%c:%s %{g}]'
+
+windowlist string "(%3n) %{..g}[%{..Y}%t%{..g}]%{..g}%=%f"
+windowlist title "Num   Name"
+
+vbell off

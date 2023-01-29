@@ -4,9 +4,21 @@ dependencies:
   dbt-rules:
     url: https://github.com/daedaleanai/dbt-rules.git
     version: origin/master
-    hash: ""
+    hash: 632f9291b2ad145cc1e65aee2f53f5d7471c1c9c
+  fd:
+    url: https://github.com/sharkdp/fd/releases/download/v8.6.0/fd-v8.6.0-x86_64-unknown-linux-gnu.tar.gz
+    version: origin/master
+    hash: 32b386efe6e871a1b6777f84eea49628eb225d958d88f971c36a6e02014524b8
   neovim:
-    url: https://github.com/neovim/neovim.git
-    version: origin/stable
-    hash: ""
+    url: https://github.com/neovim/neovim/releases/download/v0.8.2/nvim-linux64.tar.gz
+    version: origin/master
+    hash: 27aef92fba0d3f51ebb8b98f3689895f9bbe48f11b74920d89280bc58fbe8e28
+  ripgrep:
+    url: https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz
+    version: origin/master
+    hash: ee4e0751ab108b6da4f47c52da187d5177dc371f0f512a7caaec5434e711c091
+  verilator:
+    url: https://github.com/nielshaandbaek/verilator.git
+    version: origin/master
+    hash: 86d37c7ce301795d20abe5eb929366351103248d
 flags: {}
