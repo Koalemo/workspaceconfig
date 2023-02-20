@@ -11,6 +11,7 @@ sudo apt install golang-1.18 golang-go
 # TODO (ng): Double check these:
 sudo apt install ninja-build
 sudo apt install git
+sudo apt install cargo # needed for LspInstall
 
 go install github.com/daedaleanai/dbt@latest
 
@@ -25,4 +26,3 @@ mkdir -p $ROOT/bin; rm -rf $ROOT/bin/*
 
 ln -s $ROOT/DEPS/ripgrep/rg $ROOT/bin/rg
 ln -s $ROOT/DEPS/fd/fd $ROOT/bin/fd
-

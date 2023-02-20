@@ -40,6 +40,7 @@ return require('packer').startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
     use 'tpope/vim-sleuth'
+
     use {
         'VonHeikemen/lsp-zero.nvim',
         requires = {
@@ -66,6 +67,7 @@ return require('packer').startup(function(use)
         }
     }
 
+    use 'nvim-tree/nvim-web-devicons'
     use {
         "folke/trouble.nvim",
         requires = "kyazdani42/nvim-web-devicons",

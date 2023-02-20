@@ -17,10 +17,6 @@ dependencies:
     url: https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz
     version: origin/master
     hash: ee4e0751ab108b6da4f47c52da187d5177dc371f0f512a7caaec5434e711c091
-  rust:
-    url: https://static.rust-lang.org/dist/rust-nightly-x86_64-unknown-linux-gnu.tar.gz
-    version: origin/master
-    hash: c75652e66c7fc62ab13b6a4f79a250554df7da8d23d8ca34544644f790b64558
   verilator:
     url: https://github.com/nielshaandbaek/verilator.git
     version: origin/master
