@@ -98,7 +98,8 @@ return require('packer').startup(function(use)
         end
     })
     use "cloudhead/neovim-fuzzy"
-
+    use 'voldikss/vim-floaterm'
+    use 'kaicataldo/material.vim'
     if packer_bootstrap then
         require('packer').sync()
     end

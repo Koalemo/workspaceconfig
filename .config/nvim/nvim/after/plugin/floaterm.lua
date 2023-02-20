@@ -1,0 +1,5 @@
+vim.keymap.set("n", "<leader>ftn", ":FloatermNew<cr>")
+vim.keymap.set("n", "<leader>ftk", ":FloatermKill<cr>")
+vim.keymap.set("n", "<leader>ftt", ":FloatermToggle<cr>")
+vim.keymap.set("n", "<leader>fh", ":FloatermPrev<cr>")
+vim.keymap.set("n", "<leader>fl", ":FloatermNext<cr>")
