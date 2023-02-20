@@ -1,8 +1,4 @@
 -- TODO: CHECK
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
--- TODO: CHECK
 vim.paste = (function(overridden)
   return function(lines, phase)
     for i,line in ipairs(lines) do
