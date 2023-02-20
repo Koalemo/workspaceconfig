@@ -30,3 +30,9 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "100"
 vim.opt.clipboard = "unnamedplus"
+
+vim.g.netrw_altfile = 1
+vim.g.netrw_liststyle = 3
+vim.g.netrw_banner = 1
+
+vim.cmd "colorscheme material"

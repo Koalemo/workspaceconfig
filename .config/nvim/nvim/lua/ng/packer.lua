@@ -100,6 +100,14 @@ return require('packer').startup(function(use)
     use "cloudhead/neovim-fuzzy"
     use 'voldikss/vim-floaterm'
     use 'kaicataldo/material.vim'
+
+    use "tpope/vim-abolish"
+    use "tpope/vim-eunuch"
+    use "tpope/vim-vinegar"
+    use "jremmen/vim-ripgrep"
+    use 'qxxxb/vim-searchhi'
+    use 'kshenoy/vim-signature'
+
     if packer_bootstrap then
         require('packer').sync()
     end
