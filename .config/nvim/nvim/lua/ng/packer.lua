@@ -27,8 +27,8 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-    use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
-    use('nvim-treesitter/playground')
+    -- use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
+    -- use('nvim-treesitter/playground')
     --use('theprimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
@@ -76,15 +76,15 @@ return require('packer').startup(function(use)
             }
         end
     }
-    use {
-        "danymat/neogen",
-        config = function()
-            require('neogen').setup {}
-        end,
-        requires = "nvim-treesitter/nvim-treesitter",
+    -- use {
+        -- "danymat/neogen",
+        -- config = function()
+            -- require('neogen').setup {}
+        -- end,
+        -- requires = "nvim-treesitter/nvim-treesitter",
         -- Uncomment next line if you want to follow only stable versions
         -- tag = "*"
-    }
+    -- }
     use({
         "kylechui/nvim-surround",
         tag = "*", -- Use for stability; omit to use `main` branch for the latest features
