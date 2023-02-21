@@ -41,6 +41,8 @@ return require('packer').startup(function(use)
     }
     use 'tpope/vim-sleuth'
 
+    use 'neovim/nvim-lspconfig'
+
     use {
         'VonHeikemen/lsp-zero.nvim',
         requires = {
@@ -107,6 +109,7 @@ return require('packer').startup(function(use)
     use "jremmen/vim-ripgrep"
     use 'qxxxb/vim-searchhi'
     use 'kshenoy/vim-signature'
+
 
     if packer_bootstrap then
         require('packer').sync()
