@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 
 # Set repo root variable
-ROOT=`git rev-parse --show-toplevel`
+ROOT=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+ROOT="$ROOT/.."
+
 
 # Enable dbt command competion
 . $ROOT/sourceme/dbt-completion.sh
 
 # Export binaries to path
 echo "Exporting binaries to PATH; prepending it to existing $PATH variable, giving them priority over system binaries."
-export PATH="$(find ~+ $root -type d -name bin -printf '%p:')"$PATH
+export PATH="$(find ~+ $ROOT -type d -name bin -printf '%p:')"$PATH
 
 # Export configuration paths
 export CONFIGROOT=$ROOT/.config
