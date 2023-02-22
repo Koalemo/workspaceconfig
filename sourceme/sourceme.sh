@@ -10,7 +10,7 @@ ROOT="$ROOT/.."
 
 # Export binaries to path
 echo "Exporting binaries to PATH; prepending it to existing $PATH variable, giving them priority over system binaries."
-export PATH="$(find ~+ $ROOT -type d -name bin -printf '%p:')"$PATH
+export PATH="$(find "$ROOT" -type d -name bin -printf '%p:')"$PATH
 
 # Export configuration paths
 export CONFIGROOT=$ROOT/.config

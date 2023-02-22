@@ -12,6 +12,9 @@ ROOT=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 #sudo apt install ninja-build
 #sudo apt install git
 #sudo apt install cargo # needed for LspInstall
+#sudo apt install screen
+
+pip3 install neovim-remote
 
 go install github.com/daedaleanai/dbt@latest
 
@@ -19,7 +22,6 @@ go install github.com/daedaleanai/dbt@latest
 dbt sync
 
 # Install GNU Screen
-#sudo apt install screen
 
 # Directory for binary links
 mkdir -p $ROOT/bin; rm -rf $ROOT/bin/*
