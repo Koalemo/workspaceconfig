@@ -110,6 +110,7 @@ return require('packer').startup(function(use)
     use 'qxxxb/vim-searchhi'
     use 'kshenoy/vim-signature'
 
+    use 'godlygeek/tabular'
 
     if packer_bootstrap then
         require('packer').sync()
