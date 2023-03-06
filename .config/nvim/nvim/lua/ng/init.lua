@@ -29,3 +29,9 @@ autocmd({"BufWritePre"}, {
     command = [[%s/\s\+$//e]],
 })
 
+vim.cmd("let i = 1 \
+    while i <= 9 \
+      execute 'nnoremap <Leader>' . i . ' :' . i . 'wincmd w<CR>' \
+        let i = i + 1 \
+    endwhile ")
+

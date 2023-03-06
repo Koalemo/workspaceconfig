@@ -30,7 +30,10 @@ return require('packer').startup(function(use)
     -- use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
     -- use('nvim-treesitter/playground')
     --use('theprimeagen/harpoon')
-    use('mbbill/undotree')
+    -- use('mbbill/undotree')
+
+    use('simnalamburt/vim-mundo')
+
     use('tpope/vim-fugitive')
     use('airblade/vim-gitgutter')
     use("nathom/filetype.nvim")
@@ -111,6 +114,8 @@ return require('packer').startup(function(use)
     use 'kshenoy/vim-signature'
 
     use 'godlygeek/tabular'
+
+    use 'noib3/nvim-cokeline'
 
     if packer_bootstrap then
         require('packer').sync()
