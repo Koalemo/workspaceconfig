@@ -1,3 +1,19 @@
+require('telescope').setup({
+    pickers = {
+        find_files = {
+            theme = 'ivy',
+        },
+    },
+    defaults = {
+        layout_strategy='horizontal',
+        layout_config={
+            height = 0.3
+        },
+        anchor="S"
+    },
+})
+
+
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = '[F]ind [H]elp' })
 vim.keymap.set('n', '<leader>fw', builtin.grep_string, { desc = '[F]ind current [W]ord' })
