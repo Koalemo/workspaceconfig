@@ -117,6 +117,13 @@ return require('packer').startup(function(use)
 
     use 'noib3/nvim-cokeline'
 
+    use 'tpope/vim-obsession'
+
+    use 'dense-analysis/ale'
+
+    -- This  is dangerous though: It opens a new buffer with the original contents. Do not close the wrong one or you might lose data. Better not use it.
+    --use 'JBarberU/vim-diffsaved'
+
     if packer_bootstrap then
         require('packer').sync()
     end

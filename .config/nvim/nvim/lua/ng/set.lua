@@ -38,3 +38,7 @@ vim.g.netrw_banner = 1
 vim.opt.showtabline=2
 
 vim.opt.wrap = true
+
+-- Don't lose selection when shifting sideways
+vim.keymap.set("x", "<", "<gv")
+vim.keymap.set("x", ">", ">gv")
