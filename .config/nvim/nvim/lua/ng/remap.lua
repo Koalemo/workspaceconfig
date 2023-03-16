@@ -34,3 +34,7 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
 
 -- Change directory
 vim.keymap.set('n', '<leader>cd', ':cd %:p:h<CR>:pwd<CR>')
+
+-- Buffer close
+vim.keymap.set('n', '<leader>bc', ':bdelete<cr>')
+vim.keymap.set('n', '<leader>bd', ':bdelete!<cr>')
