@@ -1,4 +1,4 @@
--- vim.opt.termguicolors = true
+vim.opt.termguicolors = true
 vim.opt.guicursor = ""
 
 vim.opt.nu = true
@@ -42,3 +42,5 @@ vim.opt.wrap = true
 -- Don't lose selection when shifting sideways
 vim.keymap.set("x", "<", "<gv")
 vim.keymap.set("x", ">", ">gv")
+
+vim.cmd "colorscheme slate"

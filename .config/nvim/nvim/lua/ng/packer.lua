@@ -124,6 +124,10 @@ return require('packer').startup(function(use)
     -- This  is dangerous though: It opens a new buffer with the original contents. Do not close the wrong one or you might lose data. Better not use it.
     --use 'JBarberU/vim-diffsaved'
 
+    use 'akinsho/bufferline.nvim'
+
+    use 'twe4ked/vim-colorscheme-switcher'
+
     if packer_bootstrap then
         require('packer').sync()
     end
