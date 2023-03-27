@@ -42,7 +42,8 @@ alias less='less -m -N -g -i -J --line-numbers --underline-special'
 #alias less='less -N -m -g -i -J --line-numbers --underline-special'
 alias more='less'
 
-
+# Make tmux use conf file from workspaceconfig:
+alias tmux='tmux -f $ROOT/.config/tmux/tmux.conf'
 
 # Use "highlight" in place of "cat"
 # alias cat="highlight $1 --out-format xterm256 --line-numbers --quiet --force --style solarized-light -D ${SCRATCHPATH}/highlight_data"
