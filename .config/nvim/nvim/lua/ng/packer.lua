@@ -126,7 +126,12 @@ return require('packer').startup(function(use)
 
     use 'akinsho/bufferline.nvim'
 
-    use 'twe4ked/vim-colorscheme-switcher'
+
+    use 'rafi/awesome-vim-colorschemes'
+
+    use { 'xolox/vim-colorscheme-switcher',
+        requires = "xolox/vim-misc"
+    }
 
     if packer_bootstrap then
         require('packer').sync()
