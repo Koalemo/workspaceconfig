@@ -39,3 +39,5 @@ set errorformat+=\\*\\*\\ %tRROR\\ \\(suppressible\\):\\ \\(vopt-%n\\)\\ %f(%l):
 set errorformat+=%f\\(%l\\):\\ (vopt-%n)\\ %m \
 set errorformat+=\\#\\ \\*\\*\\ %trror:\\ T=%.%#\\ %f\\(%l\\):\\ %m \
 set errorformat+=\\#\\ Fatal\\ error\\ at\\ %f\\ line\\ %l")
+
+vim.g.ale_python_flake8_options='--max-line-length 120'
