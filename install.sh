@@ -5,14 +5,7 @@
 # Set repo root variable
 ROOT=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-# Install DBT dependency manager
-# TODO (ng): Double check these:
-# Prerequisites
-#sudo apt install golang-1.18 golang-go
-#sudo apt install ninja-build
-#sudo apt install git
-#sudo apt install cargo # needed for LspInstall
-#sudo apt install screen
+#sudo apt install cargo # needed for LspInstall TODO: still needed?
 
 pip3 install neovim-remote
 

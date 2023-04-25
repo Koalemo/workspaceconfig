@@ -5,20 +5,25 @@ dependencies:
     url: https://github.com/daedaleanai/dbt-rules.git
     version: origin/master
     hash: 48fe6e3571c198bfa6a7d62674e5a9e9ec9f863a
+    type: ""
   fd:
     url: https://github.com/sharkdp/fd/releases/download/v8.6.0/fd-v8.6.0-x86_64-unknown-linux-gnu.tar.gz
     version: origin/master
     hash: 32b386efe6e871a1b6777f84eea49628eb225d958d88f971c36a6e02014524b8
+    type: ""
   neovim:
     url: https://github.com/neovim/neovim/releases/download/v0.8.3/nvim-linux64.tar.gz
     version: origin/master
     hash: 58ac03b345e8675e13322f8c7135906ce26a1ca7a87d041344d64b207be7bedf
+    type: ""
   ripgrep:
     url: https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz
     version: origin/master
     hash: ee4e0751ab108b6da4f47c52da187d5177dc371f0f512a7caaec5434e711c091
+    type: ""
   verilator:
     url: https://github.com/nielshaandbaek/verilator.git
     version: origin/master
     hash: 86d37c7ce301795d20abe5eb929366351103248d
+    type: ""
 flags: {}
