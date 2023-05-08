@@ -26,4 +26,9 @@ dependencies:
     version: origin/master
     hash: 86d37c7ce301795d20abe5eb929366351103248d
     type: ""
+  xpra:
+    url: https://github.com/Xpra-org/xpra.git
+    version: origin/master
+    hash: a856a3b9d7feef7d1bd94bbef7aa1a370f24337b
+    type: ""
 flags: {}

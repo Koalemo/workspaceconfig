@@ -14,7 +14,10 @@ go install github.com/daedaleanai/dbt@latest
 # Update dependencies
 dbt sync
 
-# Install GNU Screen
+# cd DEPS/xpra
+# -> follow instructions in https://github.com/Xpra-org/xpra/tree/master/docs/Build
+# Then:
+# cd bin; ln -s /path/to/xpra-install/bin/xpra xpra
 
 # Directory for binary links
 mkdir -p $ROOT/bin; rm -rf $ROOT/bin/*
