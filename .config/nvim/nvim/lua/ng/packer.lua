@@ -109,7 +109,10 @@ return require('packer').startup(function(use)
     use "tpope/vim-abolish"
     use "tpope/vim-eunuch"
     use "tpope/vim-vinegar"
+
     use "jremmen/vim-ripgrep"
+    use "stefandtw/quickfix-reflector.vim"
+
     use 'qxxxb/vim-searchhi'
     use 'kshenoy/vim-signature'
 
@@ -129,9 +132,16 @@ return require('packer').startup(function(use)
 
     use 'rafi/awesome-vim-colorschemes'
 
+    -- for easy split resizing
+    -- see https://vim.fandom.com/wiki/Resize_splits_more_quickly#:~:text=To%20resize%20all%20windows%20to,%2C%20use%20Ctrl%2Dw%20%7C%20.
+    -- TODO: Make this work.
+    -- use 'kana/vim-submode'
+
     use { 'xolox/vim-colorscheme-switcher',
         requires = "xolox/vim-misc"
     }
+
+    use 'averms/black-nvim'
 
     if packer_bootstrap then
         require('packer').sync()
