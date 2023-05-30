@@ -18,6 +18,9 @@ dbt sync
 # -> follow instructions in https://github.com/Xpra-org/xpra/tree/master/docs/Build
 # Then:
 # cd bin; ln -s /path/to/xpra-install/bin/xpra xpra
+#
+# cd DEPS/tmux
+# -> follow instructions in https://github.com/tmux/tmux/wiki/Installing
 
 # Directory for binary links
 mkdir -p $ROOT/bin; rm -rf $ROOT/bin/*
