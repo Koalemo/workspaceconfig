@@ -43,7 +43,7 @@ alias less='less -m -N -g -i -J --line-numbers --underline-special'
 alias more='less'
 
 # Make tmux use conf file from workspaceconfig:
-alias tmux='tmux -f $ROOT/.config/tmux/tmux.conf'
+alias tmux="tmux -f $CONFIGROOT/tmux/tmux.conf"
 
 # Use "highlight" in place of "cat"
 # alias cat="highlight $1 --out-format xterm256 --line-numbers --quiet --force --style solarized-light -D ${SCRATCHPATH}/highlight_data"
@@ -67,3 +67,4 @@ if [[ -z $XILINXD_LICENSE_FILE ]]; then
     echo WARNING: variable XILINXD_LICENSE_FILE is not set.
 fi
 export WORKSPACE_SET=1
+
