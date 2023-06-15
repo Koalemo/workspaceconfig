@@ -42,3 +42,9 @@ vim.keymap.set('n', '<leader>bd', ':bdelete!<cr>')
 -- insert a new line without leaving normal moede (almost)
 vim.keymap.set('n', '<leader>o', 'o<ESC>k')
 vim.keymap.set('n', '<leader>O', 'O<ESC>j')
+
+-- Split resizing
+vim.keymap.set('n',  '<C-l>', '<C-W>>')
+vim.keymap.set('n',  '<C-h>', '<C-W><')
+vim.keymap.set('n',  '<C-n>', '<C-W>+')
+vim.keymap.set('n',  '<C-i>', '<C-W>-')
