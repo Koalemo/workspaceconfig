@@ -3,6 +3,13 @@
 ROOT=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 echo "Sourcing workspace config from $ROOT"
 
+# Make history available across all console
+# Avoid duplicates
+HISTCONTROL=ignoredups:erasedups
+
+# After each command, append to the history file and reread it
+PROMPT_COMMAND="${PROMPT_COMMAND:$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
 # Set repo root variable
 ROOT="$ROOT/.."
 
