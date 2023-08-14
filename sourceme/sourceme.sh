@@ -23,7 +23,7 @@ if [[ -z "$WORKSPACE_SET" ]]; then
 fi
 
 # Export configuration paths
-export CONFIGROOT=$ROOT/.config
+export CONFIGROOT=$ROOT/config
 export SCREENRC=$CONFIGROOT/screen/screenrc
 export NVIMCONFIG=$CONFIGROOT/nvim
 
