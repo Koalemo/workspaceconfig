@@ -51,6 +51,7 @@ alias more='less'
 
 # Make tmux use conf file from workspaceconfig:
 alias tmux="tmux -f $CONFIGROOT/tmux/tmux.conf"
+source $CONFIGROOT/tmux/.tmux-powerlinerc
 
 # Use "highlight" in place of "cat"
 # alias cat="highlight $1 --out-format xterm256 --line-numbers --quiet --force --style solarized-light -D ${SCRATCHPATH}/highlight_data"
