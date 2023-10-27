@@ -12,7 +12,7 @@ dependencies:
     hash: 32b386efe6e871a1b6777f84eea49628eb225d958d88f971c36a6e02014524b8
     type: ""
   neovim:
-    url: https://github.com/neovim/neovim/releases/download/v0.8.3/nvim-linux64.tar.gz
+    url: https://github.com/neovim/neovim/releases/download/v0.9.4/nvim-linux64.tar.gz
     version: origin/master
     hash: 58ac03b345e8675e13322f8c7135906ce26a1ca7a87d041344d64b207be7bedf
     type: ""
