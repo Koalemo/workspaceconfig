@@ -1,10 +1,10 @@
-vim.g.ale_verilog_vlog_options ='-work work -quiet -lint "+incdir+/home/ng/code/exp-compute/DEPS"'
+vim.g.ale_verilog_vlog_options ='-work BUILD/OUTPUT/*_lib -quiet -lint'
 
 -- let g:ale_linters = { 'systemverilog': ['verible', 'verilator', 'vlog']}
 -- let g:ale_linters = { 'verilog': ['verible', 'verilator']}
 
 
-vim.g.ale_verilog_verilator_options="-I'/home/ng/code/exp-compute/DEPS'"
+-- vim.g.ale_verilog_verilator_options="-I'/home/ng/code/exp-compute/DEPS'"
 -- let g:ale_verilog_vlog_options = '-quiet -lint "+incdir+include" -suppress 2583 -svinputport=compat'
 -- let g:ale_verilog_xvlog_options = '-sv --include vta/hw/dta/sim2 --incr'
 
