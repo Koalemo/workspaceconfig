@@ -43,4 +43,4 @@ vim.opt.wrap = true
 vim.keymap.set("x", "<", "<gv")
 vim.keymap.set("x", ">", ">gv")
 
-vim.cmd "colorscheme slate"
+vim.cmd "colorscheme spacecamp"
