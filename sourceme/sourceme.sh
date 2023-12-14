@@ -76,3 +76,6 @@ if [[ -z $XILINXD_LICENSE_FILE ]]; then
 fi
 export WORKSPACE_SET=1
 
+
+set -o vi
+
