@@ -17,6 +17,11 @@ Add the following to ~/.ssh/rc on each new server:
 if test "$SSH_AUTH_SOCK" ; then
   ln -sf $SSH_AUTH_SOCK ~/.ssh/ssh_auth_sock
 fi
+
+# And some magic make vanilla X11 forwarding work
+if read proto cookie && [ -n "$DISPLAY" ]; then
+  echo "add unix:${DISPLAY#localhost:} $proto $cookie" | xauth -q
+fi
 ```
 
 # Activate
