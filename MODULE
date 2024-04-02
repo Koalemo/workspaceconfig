@@ -4,7 +4,7 @@ dependencies:
   dbt-rules:
     url: https://github.com/daedaleanai/dbt-rules.git
     version: origin/master
-    hash: 4f03fc5ea97bc04079436f3411ddcda66e7dcf0d
+    hash: 526966e651b33f45ad230f1483717f1da7a00b9f
     type: ""
   fd:
     url: https://github.com/sharkdp/fd/releases/download/v8.6.0/fd-v8.6.0-x86_64-unknown-linux-gnu.tar.gz
@@ -39,6 +39,6 @@ dependencies:
   xpra:
     url: https://github.com/Xpra-org/xpra.git
     version: origin/master
-    hash: a5b7faf24c8af8fa6204d22707cf911f1938b982
+    hash: 78e50d59db9400858f0fcd41bc24ae0835ba594f
     type: ""
 flags: {}

@@ -1,4 +1,4 @@
-vim.g.ale_verilog_vlog_options ='-work BUILD/OUTPUT/questa_lib/work -quiet -lint'
+vim.g.ale_verilog_vlog_options ='-work BUILD/OUTPUT/questa_lib/work -quiet -lint +incdir+DEPS/prod-fpga-common/hw/util/sim/util +incdir+DEPS'
 
 -- let g:ale_linters = { 'systemverilog': ['verible', 'verilator', 'vlog']}
 -- let g:ale_linters = { 'verilog': ['verible', 'verilator']}

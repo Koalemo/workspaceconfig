@@ -80,6 +80,9 @@ alias vvfi="verible-verilog-format --inplace"
 alias vvmts="vivado -mode tcl -source "
 alias vvmbs="vivado -mode batch -source "
 
+export HISTSIZE=10000000
+export HISTFILESIZE=10000000
+
 if [[ -z $GOPATH ]]; then
     echo "WARNING: variable GOPATH is not set."
 fi
