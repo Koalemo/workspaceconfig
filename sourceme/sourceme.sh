@@ -1,5 +1,22 @@
 #!/usr/bin/env bash
 
+# TODO (ng): This is just hacked in here. MAy depend on the terminal emulator if this works or not
+# Function to extract the last 2 levels from the current path
+function CustomPWD {
+    # Remove from $PWD the shortest part of /*/* that matches the back end of $var
+    tmp=${PWD%/*/*};
+    # If tmp is of positive length not equal PWD, print the last characters of PWD.
+    # Else, print PWD.
+    [ ${#tmp} -gt 0 -a "$tmp" != "$PWD" ] && echo ${PWD:${#tmp}+1} || echo $PWD;
+}
+
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+# Create prompt header
+PS1='\h:\[\033[1;31m\][$(CustomPWD)]\[\033[32m\]$(parse_git_branch)\[\033[00m\] \$ '
+
 ROOT=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 echo "Sourcing workspace config from $ROOT"
 
