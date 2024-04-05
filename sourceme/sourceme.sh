@@ -16,6 +16,16 @@ parse_git_branch() {
 
 # Create prompt header
 PS1='\h:\[\033[1;31m\][$(CustomPWD)]\[\033[32m\]$(parse_git_branch)\[\033[00m\] \$ '
+#
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+   # PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+	PS1="\[\e]0;\u@\h: \w\a\]$PS1"
+	;;
+*)
+    ;;
+esac
 
 ROOT=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 echo "Sourcing workspace config from $ROOT"
@@ -96,6 +106,9 @@ if [[ -z $XILINXD_LICENSE_FILE ]]; then
 fi
 export WORKSPACE_SET=1
 
+
+# Config file not public. See: https://i.daedalean.ai/infrastructure/s3-clients.html#ddlnfs2
+export DDLNFS_S3_CONFIG=~/s3.yaml
 
 set -o vi
 
