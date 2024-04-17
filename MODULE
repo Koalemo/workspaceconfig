@@ -16,6 +16,11 @@ dependencies:
     version: origin/master
     hash: dbf4eae83647ca5c3ce1cd86939542a7b6ae49cd78884f3b4236f4f248e5d447
     type: ""
+  nh-scripts:
+    url: git@git-ssh.ddln.ai:ng/nh-scripts.git
+    version: origin/master
+    hash: f9c73739802c66b0542f57bfe47edd4892f8c0ef
+    type: ""
   ripgrep:
     url: https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz
     version: origin/master
@@ -34,7 +39,7 @@ dependencies:
   verilator:
     url: https://github.com/nielshaandbaek/verilator.git
     version: origin/master
-    hash: 86d37c7ce301795d20abe5eb929366351103248d
+    hash: a84919da18154ad70ec1f26b386c82dde1f5db06
     type: ""
   xpra:
     url: https://github.com/Xpra-org/xpra.git

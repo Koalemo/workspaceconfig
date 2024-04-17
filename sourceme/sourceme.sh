@@ -45,8 +45,15 @@ ROOT="$ROOT/.."
 
 #Update path only if we haven't done that yet.
 if [[ -z "$WORKSPACE_SET" ]]; then
-    # Export binaries to path
+    # Export binaries from workspaceconfig repo to path
     export PATH="$(find "$ROOT" -type d -name bin -printf '%p:')"$PATH
+
+    #if [[ -z $TOOLS_PATH ]]; then
+        #echo WARNING: variable TOOLS_PATH is not set.
+    #else
+        # Export binaries from local tools to path
+        # export PATH=$PATH"$(find "$TOOLS_PATH" -type d -name bin -printf ':%p')"
+    #fi
 fi
 
 # Export configuration paths
@@ -104,6 +111,20 @@ fi
 if [[ -z $XILINXD_LICENSE_FILE ]]; then
     echo WARNING: variable XILINXD_LICENSE_FILE is not set.
 fi
+
+if [[ -z $LIBERO_PATH && -z LIBERO_LIC_PATH ]]; then
+    echo WARNING: variable LIBERO_PATH and / or LIBERO_LIC_PATH is not set.
+else
+    # Alias for Libero launch command
+    alias libefire='pkill -f lmgrd ; $LIBERO_PATH/lic/lmgrd -c $LIBERO_LIC_PATH/License.dat
+
+    Microchip/Libero/bin/libero'
+    alias libedone='pkill -f lmgrd ; pkill -f libero'
+
+    alias libelic='$LIBERO_PATH/lic/lmgrd -c $LIBERO_LIC_PATH/License.dat'
+fi
+
+
 export WORKSPACE_SET=1
 
 
