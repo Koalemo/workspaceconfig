@@ -11,6 +11,11 @@ dependencies:
     version: origin/master
     hash: 32b386efe6e871a1b6777f84eea49628eb225d958d88f971c36a6e02014524b8
     type: ""
+  jupyter_client:
+    url: git@github.com:jupyter/jupyter_client.git
+    version: origin/main
+    hash: 8ca76ea1e67c9732a67cab812f8129b68671b9cd
+    type: ""
   neovim:
     url: https://github.com/neovim/neovim/releases/download/v0.9.4/nvim-linux64.tar.gz
     version: origin/master

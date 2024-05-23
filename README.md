@@ -32,4 +32,15 @@ pushd path/to/workspaceconfig
 popd;
 ```
 
+# How to avoid using stupid jupyter lwb webui:
+Use [molten-nvim](https://github.com/benlubas/molten-nvim/blob/main/docs/Probably-Too-Quick-Start-Guide.md)
+in your venv:
+```
+# install pynvim
+pip install pynvim
 
+#install jupyter_client:
+dbt sync
+pushd DEPS/jupyter_client
+pip install -e ".[test]"
+```

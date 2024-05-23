@@ -156,6 +156,8 @@ return require('packer').startup(function(use)
 
     use 'tpope/vim-markdown'
 
+    use "benlubas/molten-nvim"
+
     if packer_bootstrap then
         require('packer').sync()
     end
