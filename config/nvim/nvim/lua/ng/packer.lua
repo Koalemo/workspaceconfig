@@ -2,6 +2,7 @@
 
 -- Only required if you have packer configured as `opt`
 --vim.cmd.packadd('packer.nvim')
+vim.g.python3_host_prog='/usr/bin/python3.10'
 
 local ensure_packer = function()
     local fn = vim.fn
@@ -155,6 +156,11 @@ return require('packer').startup(function(use)
     })
 
     use 'tpope/vim-markdown'
+
+
+    package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua"
+    package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua"
+    use "3rd/image.nvim"
 
     use "benlubas/molten-nvim"
 

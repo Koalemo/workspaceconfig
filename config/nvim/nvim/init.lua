@@ -1,4 +1,5 @@
 -- TODO: CHECK
+--
 vim.paste = (function(overridden)
   return function(lines, phase)
     for i,line in ipairs(lines) do

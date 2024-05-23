@@ -17,9 +17,9 @@ dependencies:
     hash: 8ca76ea1e67c9732a67cab812f8129b68671b9cd
     type: ""
   neovim:
-    url: https://github.com/neovim/neovim/releases/download/v0.9.4/nvim-linux64.tar.gz
+    url: https://github.com/neovim/neovim/releases/download/v0.10.0/nvim-linux64.tar.gz
     version: origin/master
-    hash: dbf4eae83647ca5c3ce1cd86939542a7b6ae49cd78884f3b4236f4f248e5d447
+    hash: be1f0988d0de71c375982b87b86cd28d2bab35ece8285abe3b0aac57604dfc5a
     type: ""
   nh-scripts:
     url: git@git-ssh.ddln.ai:ng/nh-scripts.git
