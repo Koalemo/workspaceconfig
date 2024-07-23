@@ -97,6 +97,8 @@ alias vvfi="verible-verilog-format --inplace"
 alias vvmts="vivado -mode tcl -source "
 alias vvmbs="vivado -mode batch -source "
 
+alias gt="git ticket"
+
 export HISTSIZE=10000000
 export HISTFILESIZE=10000000
 
