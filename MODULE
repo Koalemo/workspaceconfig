@@ -19,7 +19,7 @@ dependencies:
   nh-scripts:
     url: git@git-ssh.ddln.ai:ng/nh-scripts.git
     version: origin/master
-    hash: f9c73739802c66b0542f57bfe47edd4892f8c0ef
+    hash: 19556d158a5d891e8cf0b2371c77f483be9b8a1c
     type: ""
   ripgrep:
     url: https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz
