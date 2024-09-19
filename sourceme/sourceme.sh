@@ -56,6 +56,8 @@ if [[ -z "$WORKSPACE_SET" ]]; then
     #fi
 fi
 
+export PATH=$PATH:/home/ng/.npm-global/bin
+
 # Export configuration paths
 export CONFIGROOT=$ROOT/config
 export SCREENRC=$CONFIGROOT/screen/screenrc

@@ -6,11 +6,6 @@ dependencies:
     version: origin/master
     hash: 526966e651b33f45ad230f1483717f1da7a00b9f
     type: ""
-  fd:
-    url: https://github.com/sharkdp/fd/releases/download/v8.6.0/fd-v8.6.0-x86_64-unknown-linux-gnu.tar.gz
-    version: origin/master
-    hash: 32b386efe6e871a1b6777f84eea49628eb225d958d88f971c36a6e02014524b8
-    type: ""
   neovim:
     url: https://github.com/neovim/neovim/releases/download/v0.10.0/nvim-linux64.tar.gz
     version: origin/master

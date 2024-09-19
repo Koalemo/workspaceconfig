@@ -3,3 +3,5 @@ require'lspconfig'.svls.setup{
     filetypes = { 'verilog', 'systemverilog' },
 }
 
+
+require'lspconfig'.svlangserver.setup{}
