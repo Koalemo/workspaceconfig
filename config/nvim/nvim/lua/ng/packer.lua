@@ -22,7 +22,7 @@ return require('packer').startup(function(use)
 
     -- Theme
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.4',
+        'nvim-telescope/telescope.nvim', tag = '0.1.8',
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' },
                     {"nvim-treesitter/nvim-treesitter"}}
@@ -31,6 +31,16 @@ return require('packer').startup(function(use)
     -- use('nvim-treesitter/playground')
     --use('theprimeagen/harpoon')
     -- use('mbbill/undotree')
+
+
+    -- gutentags is experimentally replaced by treesitter-textobjects
+    --
+    -- use 'ludovicchabant/vim-gutentags'
+    use({
+      "nvim-treesitter/nvim-treesitter-textobjects",
+      after = "nvim-treesitter",
+      requires = "nvim-treesitter/nvim-treesitter",
+    })
 
     use('simnalamburt/vim-mundo')
 
@@ -156,7 +166,6 @@ return require('packer').startup(function(use)
 
     use 'tpope/vim-markdown'
 
-    use 'ludovicchabant/vim-gutentags'
 
     if packer_bootstrap then
         require('packer').sync()
