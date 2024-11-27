@@ -1,7 +1,7 @@
 require'lspconfig'.svls.setup{
-    cmd = { 'svls', '-d' },
-    filetypes = { 'verilog', 'systemverilog' },
+  cmd = { 'svls', '-d' },
+  filetypes = { 'verilog', 'systemverilog' },
 }
 
 
-require'lspconfig'.svlangserver.setup{}
+-- require'lspconfig'.svlangserver.setup{}
