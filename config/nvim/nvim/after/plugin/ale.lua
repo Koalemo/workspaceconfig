@@ -13,6 +13,7 @@ vim.g.ale_verilog_vlog_options ='-work BUILD/OUTPUT/questa_lib/work -quiet -lint
 vim.keymap.set("n", "<Leader>at", ":ALEToggle<CR>")
 vim.keymap.set("n", "<Leader>ai", ":ALEInfo<CR>")
 vim.keymap.set("n", "<Leader>ad", ":ALEDetail<CR>")
+vim.keymap.set("n", "<Leader>aq", ":ALEPopulateQuickfix<CR>")
 
 vim.keymap.set("n","[e", "<Plug>(ale_previous_wrap)")
 vim.keymap.set("n","]e", "<Plug>(ale_next_wrap)")
