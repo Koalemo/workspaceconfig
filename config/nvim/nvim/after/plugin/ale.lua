@@ -18,7 +18,7 @@ vim.keymap.set("n", "<Leader>aq", ":ALEPopulateQuickfix<CR>")
 vim.keymap.set("n","[e", "<Plug>(ale_previous_wrap)")
 vim.keymap.set("n","]e", "<Plug>(ale_next_wrap)")
 
-vim.g.ale_python_pylint_options = '--rcfile=' .. vim.fn.getcwd() .. "/.pylintrc"
+vim.g.ale_python_pylint_options = '--rcfile=' .. vim.fn.getcwd() .. "/DEPS/prod-fpga-common/scripts/common/pylint.rc"
 
 --  disable  verilator lint
 -- map <Leader>ave :let g:ale_linters = { 'systemverilog': ['vlog', 'verible', 'verilator']} <cr>
@@ -26,7 +26,7 @@ vim.g.ale_python_pylint_options = '--rcfile=' .. vim.fn.getcwd() .. "/.pylintrc"
 
 vim.cmd("au FileType systemverilog let g:ale_linters = {'systemverilog' : ['vlog' ]}")
 vim.cmd("au FileType verilog let g:ale_linters = {'verilog' : ['vlog']}")
-vim.cmd("au FileType python let g:ale_linters = {'python' : ['pylint' ]}")
+vim.cmd("au FileType python let g:ale_linters = {'python' : ['pylint ' ]}")
 
 
 vim.cmd("set errorformat=\\*\\*\\ %tRROR:\\ \\(vlog-%n\\)\\ %f(%l):\\ %m \
