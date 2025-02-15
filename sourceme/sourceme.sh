@@ -48,6 +48,7 @@ if [[ -z "$WORKSPACE_SET" ]]; then
     # Export binaries from workspaceconfig repo to path
     export PATH="$(find "$ROOT" -type d -name bin -printf '%p:')"$PATH
 
+
     #if [[ -z $TOOLS_PATH ]]; then
         #echo WARNING: variable TOOLS_PATH is not set.
     #else
@@ -60,7 +61,6 @@ export PATH=$PATH:/home/ng/.npm-global/bin
 
 # Export configuration paths
 export CONFIGROOT=$ROOT/config
-export SCREENRC=$CONFIGROOT/screen/screenrc
 export NVIMCONFIG=$CONFIGROOT/nvim
 
 # Replace oldvim
