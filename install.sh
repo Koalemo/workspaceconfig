@@ -7,12 +7,14 @@ ROOT=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 #sudo apt install cargo # needed for LspInstall TODO: still needed?
 
+sudp apt install python3-pip
 pip3 install neovim-remote
 
+sudo apt install golang
 go install github.com/daedaleanai/dbt@latest
 
 # Update dependencies
-dbt sync
+~/go/bin/dbt sync
 
 # cd DEPS/xpra
 # -> follow instructions in https://github.com/Xpra-org/xpra/tree/master/docs/Build
@@ -26,4 +28,3 @@ dbt sync
 mkdir -p $ROOT/bin; rm -rf $ROOT/bin/*
 
 ln -s $ROOT/DEPS/ripgrep/rg $ROOT/bin/rg
-ln -s $ROOT/DEPS/fd/fd $ROOT/bin/fd
