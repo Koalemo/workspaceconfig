@@ -49,12 +49,12 @@ if [[ -z "$WORKSPACE_SET" ]]; then
     export PATH="$(find "$ROOT" -type d -name bin -printf '%p:')"$PATH
 
 
-    #if [[ -z $TOOLS_PATH ]]; then
-        #echo WARNING: variable TOOLS_PATH is not set.
-    #else
+    if [[ -z $TOOLS_PATH ]]; then
+        echo WARNING: variable TOOLS_PATH is not set.
+    else
         # Export binaries from local tools to path
-        # export PATH=$PATH"$(find "$TOOLS_PATH" -type d -name bin -printf ':%p')"
-    #fi
+         export PATH=$PATH"$(find "$TOOLS_PATH" -type d -name bin -printf ':%p')"
+    fi
 fi
 
 export PATH=$PATH:/home/ng/.npm-global/bin

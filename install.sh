@@ -28,3 +28,5 @@ go install github.com/daedaleanai/dbt@latest
 mkdir -p $ROOT/bin; rm -rf $ROOT/bin/*
 
 ln -s $ROOT/DEPS/ripgrep/rg $ROOT/bin/rg
+
+# On the first start of tmux: do C-a I to install tmux plugins.
