@@ -128,8 +128,7 @@ fi
 export WORKSPACE_SET=1
 
 
-# Config file not public. See: https://i.daedalean.ai/infrastructure/s3-clients.html#ddlnfs2
-export DDLNFS_S3_CONFIG=~/s3.yaml
+
 
 set -o vi
 
