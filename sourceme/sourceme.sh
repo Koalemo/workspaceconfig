@@ -92,7 +92,8 @@ source $CONFIGROOT/tmux/.tmux-powerlinerc
 # Use "highlight" in place of "cat"
 # alias cat="highlight $1 --out-format xterm256 --line-numbers --quiet --force --style solarized-light -D ${SCRATCHPATH}/highlight_data"
 
-
+# Config file not public. See: https://i.daedalean.ai/infrastructure/s3-clients.html#ddlnfs2
+export DDLNFS_S3_CONFIG=~/s3.yaml
 # Commodities
 alias vvfi="verible-verilog-format --inplace"
 
@@ -132,8 +133,7 @@ fi
 export WORKSPACE_SET=1
 
 
-# Config file not public. See: https://i.daedalean.ai/infrastructure/s3-clients.html#ddlnfs2
-export DDLNFS_S3_CONFIG=~/s3.yaml
+
 
 set -o vi
 
