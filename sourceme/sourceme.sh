@@ -106,6 +106,8 @@ export HISTFILESIZE=10000000
 
 if [[ -z $GOPATH ]]; then
     echo "WARNING: variable GOPATH is not set."
+else
+    export PATH=$GOPATH/bin:$PATH
 fi
 
 if [[ -z $LM_LICENSE_FILE ]]; then
