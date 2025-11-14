@@ -7,9 +7,9 @@ dependencies:
     hash: 526966e651b33f45ad230f1483717f1da7a00b9f
     type: ""
   neovim:
-    url: https://github.com/neovim/neovim/releases/download/v0.10.0/nvim-linux64.tar.gz
+    url: https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-x86_64.tar.gz
     version: origin/master
-    hash: be1f0988d0de71c375982b87b86cd28d2bab35ece8285abe3b0aac57604dfc5a
+    hash: b2f91117be5b5ea39edd7297156dc2a4a8df4add6c95a90809a8df19e7ab6f52
     type: ""
   ripgrep:
     url: https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz

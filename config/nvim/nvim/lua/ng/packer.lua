@@ -56,32 +56,6 @@ return require('packer').startup(function(use)
 
     use 'neovim/nvim-lspconfig'
 
-    use {
-        'VonHeikemen/lsp-zero.nvim',
-        requires = {
-            -- LSP Support
-            { 'neovim/nvim-lspconfig' },
-            { 'williamboman/mason.nvim' },
-            { 'williamboman/mason-lspconfig.nvim' },
-
-            -- Useful status updates for LSP
-            { 'j-hui/fidget.nvim' },
-            { 'folke/neodev.nvim' },
-
-            -- Autocompletion
-            { 'hrsh7th/nvim-cmp' },
-            { 'hrsh7th/cmp-buffer' },
-            { 'hrsh7th/cmp-path' },
-            { 'saadparwaiz1/cmp_luasnip' },
-            { 'hrsh7th/cmp-nvim-lsp' },
-            { 'hrsh7th/cmp-nvim-lua' },
-
-            -- Snippets
-            { 'L3MON4D3/LuaSnip' },
-            { 'rafamadriz/friendly-snippets' },
-        }
-    }
-
     -- Autocompletion (Conquer of Completion) + veridian.
     -- NEEDS MORE WORK to make it work
     -- use {'neoclide/coc.nvim', branch='master', run= 'npm ci'}
