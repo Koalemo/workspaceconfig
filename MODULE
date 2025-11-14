@@ -6,6 +6,11 @@ dependencies:
     version: origin/master
     hash: 526966e651b33f45ad230f1483717f1da7a00b9f
     type: ""
+  dwm:
+    url: https://github.com/Koalemo/dwm.git
+    version: origin/dev
+    hash: 7c3abae4e68b6a21f05cb04f3af31217259c0aa9
+    type: git
   neovim:
     url: https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-x86_64.tar.gz
     version: origin/master
