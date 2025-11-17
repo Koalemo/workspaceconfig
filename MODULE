@@ -14,7 +14,7 @@ dependencies:
   dwm:
     url: git@github.com:koalemo/dwm
     version: origin/master
-    hash: 7c3abae4e68b6a21f05cb04f3af31217259c0aa9
+    hash: 19bf7349adadd7abf573f6e2a3ab9a76060e6018
     type: git
   dwmblocks:
     url: git@github.com:/torrinfail/dwmblocks.git

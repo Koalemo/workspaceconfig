@@ -89,6 +89,9 @@ alias more='less'
 alias tmux="tmux -f $CONFIGROOT/tmux/tmux.conf"
 source $CONFIGROOT/tmux/.tmux-powerlinerc
 
+# Make qutebrowser use conf file from workspaceconfig
+alias qutebrowser="qutebrowser -C $CONFIGROOT/qutebrowser/config.py"
+
 # Use "highlight" in place of "cat"
 # alias cat="highlight $1 --out-format xterm256 --line-numbers --quiet --force --style solarized-light -D ${SCRATCHPATH}/highlight_data"
 
@@ -116,6 +119,11 @@ fi
 
 if [[ -z $XILINXD_LICENSE_FILE ]]; then
     echo WARNING: variable XILINXD_LICENSE_FILE is not set.
+fi
+
+if [[ -z $USRBIN ]]; then
+    echo WARNING: variable usrbin is not set. setting default: /usr/bin
+    export USRBIN=/usr/bin
 fi
 
 if [[ -z $LIBERO_PATH && -z LIBERO_LIC_PATH ]]; then
