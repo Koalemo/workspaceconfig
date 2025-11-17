@@ -6,10 +6,20 @@ dependencies:
     version: origin/master
     hash: 526966e651b33f45ad230f1483717f1da7a00b9f
     type: ""
+  dmenu:
+    url: git://git.suckless.org/dmenu
+    version: origin/master
+    hash: 8b48986f4c730725367e2865e5ea24931855018f
+    type: git
   dwm:
-    url: https://github.com/Koalemo/dwm.git
-    version: origin/dev
+    url: git@github.com:koalemo/dwm
+    version: origin/master
     hash: 7c3abae4e68b6a21f05cb04f3af31217259c0aa9
+    type: git
+  dwmblocks:
+    url: git@github.com:/torrinfail/dwmblocks.git
+    version: origin/master
+    hash: 8cedd220684064f1433749ed2a19a6184c22cf07
     type: git
   neovim:
     url: https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-x86_64.tar.gz
