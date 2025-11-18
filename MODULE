@@ -4,7 +4,7 @@ dependencies:
   dbt-rules:
     url: https://github.com/daedaleanai/dbt-rules.git
     version: origin/master
-    hash: 526966e651b33f45ad230f1483717f1da7a00b9f
+    hash: 8e01e748f95ad38a2dd7fc03dd14d54eb6f6e0ad
     type: ""
   dmenu:
     url: git://git.suckless.org/dmenu
@@ -13,8 +13,8 @@ dependencies:
     type: git
   dwm:
     url: git@github.com:koalemo/dwm
-    version: origin/master
-    hash: 19bf7349adadd7abf573f6e2a3ab9a76060e6018
+    version: origin/dev
+    hash: 7a0580883f27a43022ea6a45541231662e09baed
     type: git
   dwmblocks:
     url: git@github.com:/torrinfail/dwmblocks.git
@@ -44,6 +44,6 @@ dependencies:
   xpra:
     url: https://github.com/Xpra-org/xpra.git
     version: origin/master
-    hash: 78e50d59db9400858f0fcd41bc24ae0835ba594f
+    hash: 862e61193cb504de348968f2c84cf12a2be6afc0
     type: ""
 flags: {}
