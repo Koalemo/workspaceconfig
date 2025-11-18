@@ -41,7 +41,7 @@ PROMPT_COMMAND="${PROMPT_COMMAND:$PROMPT_COMMAND$'\n'}history -a; history -c; hi
 ROOT="$ROOT/.."
 
 # Enable dbt command competion
-. $ROOT/sourceme/dbt-completion.sh
+#. $ROOT/sourceme/dbt-completion.sh
 
 #Update path only if we haven't done that yet.
 if [[ -z "$WORKSPACE_SET" ]]; then
@@ -56,7 +56,6 @@ if [[ -z "$WORKSPACE_SET" ]]; then
     #fi
 fi
 
-export PATH=$PATH:/home/ng/.npm-global/bin
 
 # Export configuration paths
 export CONFIGROOT=$ROOT/config
