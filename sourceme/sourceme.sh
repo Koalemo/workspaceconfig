@@ -54,6 +54,12 @@ if [[ -z "$WORKSPACE_SET" ]]; then
         # Export binaries from local tools to path
         # export PATH=$PATH"$(find "$TOOLS_PATH" -type d -name bin -printf ':%p')"
     #fi
+
+    if [[ -z $GOPATH ]]; then
+        echo "WARNING: variable GOPATH is not set."
+   else
+        export PATH=$GOPATH/bin:$PATH
+    fi
 fi
 
 
@@ -106,11 +112,6 @@ alias gt="git ticket"
 export HISTSIZE=10000000
 export HISTFILESIZE=10000000
 
-if [[ -z $GOPATH ]]; then
-    echo "WARNING: variable GOPATH is not set."
-else
-    export PATH=$GOPATH/bin:$PATH
-fi
 
 if [[ -z $LM_LICENSE_FILE ]]; then
     echo "WARNING: variable LM_LICENSE_FILE is not set."
