@@ -14,7 +14,7 @@ dependencies:
   dwm:
     url: git@github.com:koalemo/dwm
     version: origin/dev
-    hash: 7a0580883f27a43022ea6a45541231662e09baed
+    hash: 8707122cd4a2090bf748a03278b627947f3aec57
     type: git
   dwmblocks:
     url: git@github.com:/torrinfail/dwmblocks.git
@@ -44,6 +44,6 @@ dependencies:
   xpra:
     url: https://github.com/Xpra-org/xpra.git
     version: origin/master
-    hash: 862e61193cb504de348968f2c84cf12a2be6afc0
+    hash: 17ace255ae129e6fe53aca5d66f1ebf75e9761c6
     type: ""
 flags: {}

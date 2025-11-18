@@ -35,7 +35,7 @@ echo "Sourcing workspace config from $ROOT"
 HISTCONTROL=ignoredups:erasedups
 
 # After each command, append to the history file and reread it
-PROMPT_COMMAND="${PROMPT_COMMAND:$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # Set repo root variable
 ROOT="$ROOT/.."
@@ -57,7 +57,7 @@ if [[ -z "$WORKSPACE_SET" ]]; then
 
     if [[ -z $GOPATH ]]; then
         echo "WARNING: variable GOPATH is not set."
-   else
+    else
         export PATH=$GOPATH/bin:$PATH
     fi
 fi
@@ -67,6 +67,7 @@ fi
 export CONFIGROOT=$ROOT/config
 export SCREENRC=$CONFIGROOT/screen/screenrc
 export NVIMCONFIG=$CONFIGROOT/nvim
+export TMUX_HOME=$CONFIGROOT/tmux
 
 # Replace oldvim
 echo "Setting aliases"
@@ -91,6 +92,7 @@ alias less='less -m -N -g -i -J --line-numbers --underline-special'
 alias more='less'
 
 # Make tmux use conf file from workspaceconfig:
+# NOTE: Wrapper file does not seem to work here: tpm does not load...
 alias tmux="tmux -f $CONFIGROOT/tmux/tmux.conf"
 source $CONFIGROOT/tmux/.tmux-powerlinerc
 
