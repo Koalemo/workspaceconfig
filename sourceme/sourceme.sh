@@ -58,6 +58,12 @@ if [[ -z "$WORKSPACE_SET" ]]; then
     else
         export PATH=$GOPATH/bin:$PATH
     fi
+
+    if [[ -z $CARGOPATH ]]; then
+        echo "WARNING: variable CARGOPATH is not set."
+    else
+        export PATH=$CARGOPATH/bin:$PATH
+    fi
     #
     # Export binaries from workspaceconfig repo to path
     export PATH="$(find "$ROOT" -type d -name bin -printf '%p:')"$PATH
