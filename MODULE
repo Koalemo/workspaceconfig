@@ -26,11 +26,21 @@ dependencies:
     version: origin/master
     hash: b2f91117be5b5ea39edd7297156dc2a4a8df4add6c95a90809a8df19e7ab6f52
     type: ""
+  qutebrowser:
+    url: git@github.com:qutebrowser/qutebrowser.git
+    version: origin/main
+    hash: 69f3882ce3654929896e91cf5925d8b03ee8f915
+    type: git
   ripgrep:
     url: https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz
     version: origin/master
     hash: ee4e0751ab108b6da4f47c52da187d5177dc371f0f512a7caaec5434e711c091
     type: ""
+  st:
+    url: https://git.suckless.org/st
+    version: origin/master
+    hash: 6e970474743d57a5d8b054c41fd3bff2bc895742
+    type: git
   tmux:
     url: https://github.com/tmux/tmux/releases/download/3.3a/tmux-3.3a.tar.gz
     version: origin/master
@@ -44,6 +54,6 @@ dependencies:
   xpra:
     url: https://github.com/Xpra-org/xpra.git
     version: origin/master
-    hash: 17ace255ae129e6fe53aca5d66f1ebf75e9761c6
+    hash: 17e3e70c32c2f1f7e2f3c60f0e8ac21a4f619a1e
     type: ""
 flags: {}
