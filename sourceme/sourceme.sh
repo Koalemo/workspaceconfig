@@ -45,8 +45,6 @@ ROOT="$ROOT/.."
 
 #Update path only if we haven't done that yet.
 if [[ -z "$WORKSPACE_SET" ]]; then
-    # Export binaries from workspaceconfig repo to path
-    export PATH="$(find "$ROOT" -type d -name bin -printf '%p:')"$PATH
 
     #if [[ -z $TOOLS_PATH ]]; then
         #echo WARNING: variable TOOLS_PATH is not set.
@@ -60,6 +58,9 @@ if [[ -z "$WORKSPACE_SET" ]]; then
     else
         export PATH=$GOPATH/bin:$PATH
     fi
+    #
+    # Export binaries from workspaceconfig repo to path
+    export PATH="$(find "$ROOT" -type d -name bin -printf '%p:')"$PATH
 fi
 
 
