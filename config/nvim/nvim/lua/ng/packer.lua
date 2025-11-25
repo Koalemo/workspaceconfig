@@ -54,8 +54,6 @@ return require('packer').startup(function(use)
     }
     use 'tpope/vim-sleuth'
 
-    use 'neovim/nvim-lspconfig'
-
     -- Autocompletion (Conquer of Completion) + veridian.
     -- NEEDS MORE WORK to make it work
     -- use {'neoclide/coc.nvim', branch='master', run= 'npm ci'}
