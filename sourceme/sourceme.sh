@@ -43,6 +43,9 @@ ROOT="$ROOT/.."
 # Enable dbt command competion
 #. $ROOT/sourceme/dbt-completion.sh
 
+# Run in place verilator
+export VERILATOR_ROOT=$ROOT/DEPS/verilator
+
 #Update path only if we haven't done that yet.
 if [[ -z "$WORKSPACE_SET" ]]; then
 
@@ -58,6 +61,11 @@ if [[ -z "$WORKSPACE_SET" ]]; then
     else
         export PATH=$GOPATH/bin:$PATH
     fi
+    if [[ -z $VERILATOR_ROOT ]]; then
+        echo "WARNING: variable VERILATOR_ROOT is not set."
+    else
+        export PATH=$VERILATOR_ROOT/bin:$PATH
+    fi
 
     if [[ -z $CARGOPATH ]]; then
         echo "WARNING: variable CARGOPATH is not set."
@@ -68,7 +76,7 @@ if [[ -z "$WORKSPACE_SET" ]]; then
     # Export binaries from workspaceconfig repo to path
     export PATH="$(find "$ROOT" -type d -name bin -printf '%p:')"$PATH
     # highest prio: the bins directly in the bin wrapper dir
-    export PATH="${ROOT}/bin:$PATH"
+    export  PATH=$ROOT/bin:$PATH
 fi
 
 
