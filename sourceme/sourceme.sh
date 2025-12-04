@@ -46,12 +46,12 @@ ROOT="$ROOT/.."
 #Update path only if we haven't done that yet.
 if [[ -z "$WORKSPACE_SET" ]]; then
 
-    #if [[ -z $TOOLS_PATH ]]; then
-        #echo WARNING: variable TOOLS_PATH is not set.
-    #else
+    if [[ -z $TOOLS_PATH ]]; then
+        echo WARNING: variable TOOLS_PATH is not set.
+    else
         # Export binaries from local tools to path
-        # export PATH=$PATH"$(find "$TOOLS_PATH" -type d -name bin -printf ':%p')"
-    #fi
+        export PATH=$PATH"$(find "$TOOLS_PATH" -type d -name bin -printf ':%p')"
+    fi
 
     if [[ -z $GOPATH ]]; then
         echo "WARNING: variable GOPATH is not set."
@@ -67,6 +67,8 @@ if [[ -z "$WORKSPACE_SET" ]]; then
     #
     # Export binaries from workspaceconfig repo to path
     export PATH="$(find "$ROOT" -type d -name bin -printf '%p:')"$PATH
+    # highest prio: the bins directly in the bin wrapper dir
+    export PATH="${ROOT}/bin:$PATH"
 fi
 
 
