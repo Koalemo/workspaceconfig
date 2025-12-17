@@ -24,7 +24,7 @@ dependencies:
   dwm:
     url: git@github.com:koalemo/dwm
     version: origin/dev
-    hash: 8707122cd4a2090bf748a03278b627947f3aec57
+    hash: f0d33e13e4965da0225f76cdaaaefb76445c6d25
     type: git
   dwmblocks:
     url: git@github.com:/torrinfail/dwmblocks.git
@@ -44,7 +44,7 @@ dependencies:
   qutebrowser:
     url: git@github.com:qutebrowser/qutebrowser.git
     version: origin/main
-    hash: 69f3882ce3654929896e91cf5925d8b03ee8f915
+    hash: b417f2a23ba05fe1f0e840c25e1dbaeecb1e63b9
     type: git
   ripgrep:
     url: https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz
@@ -79,6 +79,6 @@ dependencies:
   xpra:
     url: https://github.com/Xpra-org/xpra.git
     version: origin/master
-    hash: 17e3e70c32c2f1f7e2f3c60f0e8ac21a4f619a1e
+    hash: dca585314fd5d972afa45eaee8cb175ed3c41c39
     type: ""
 flags: {}
