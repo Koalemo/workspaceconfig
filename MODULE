@@ -1,6 +1,16 @@
 version: 3
 layout: ""
 dependencies:
+  OpenROAD-flow-scripts:
+    url: git@github.com:The-OpenROAD-Project/OpenROAD-flow-scripts.git
+    version: origin/master
+    hash: 792ce465f711fc473af51a2614a01381d75193e8
+    type: git
+  OpenSTA:
+    url: git@github.com:The-OpenROAD-Project/OpenSTA.git
+    version: origin/master
+    hash: 9c9b5659d6a7ecbe02ea1204aa89079a77db1d3e
+    type: git
   dbt-rules:
     url: https://github.com/daedaleanai/dbt-rules.git
     version: origin/master
@@ -26,6 +36,11 @@ dependencies:
     version: origin/master
     hash: b2f91117be5b5ea39edd7297156dc2a4a8df4add6c95a90809a8df19e7ab6f52
     type: ""
+  oss-cad-suite-build:
+    url: https://github.com/YosysHQ/oss-cad-suite-build/releases/download/2025-12-04/oss-cad-suite-linux-x64-20251204.tgz
+    version: origin/master
+    hash: 1f562852b52c103e18f9d259524cbef0f77f7add73bb64503006e69aa5e9f0db
+    type: tar.gz
   qutebrowser:
     url: git@github.com:qutebrowser/qutebrowser.git
     version: origin/main
@@ -41,6 +56,11 @@ dependencies:
     version: origin/master
     hash: 6e970474743d57a5d8b054c41fd3bff2bc895742
     type: git
+  sv2v:
+    url: git@github.com:zachjs/sv2v.git
+    version: origin/master
+    hash: d3812098d8feb2d04cc4cb55e034a1f2338db02f
+    type: git
   tmux:
     url: https://github.com/tmux/tmux/releases/download/3.3a/tmux-3.3a.tar.gz
     version: origin/master
@@ -54,7 +74,7 @@ dependencies:
   verilator:
     url: git@github.com:verilator/verilator.git
     version: origin/master
-    hash: 4426aff3d328fcb333849a03e7e41dff3a65899d
+    hash: bd38775ad2c1e4fffa4d56d4ef4f835ece216b39
     type: git
   xpra:
     url: https://github.com/Xpra-org/xpra.git
