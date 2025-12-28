@@ -11,9 +11,6 @@ return {
   --   dependencies = "nvim-treesitter/nvim-treesitter",
   -- },
 
-  {
-    'simnalamburt/vim-mundo'
-  },
   
   {
     'tpope/vim-fugitive'
