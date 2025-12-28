@@ -86,7 +86,7 @@ fi
 # Export configuration paths
 export CONFIGROOT=$ROOT/config
 export SCREENRC=$CONFIGROOT/screen/screenrc
-export NVIMCONFIG=$CONFIGROOT/nvim
+export NVIMCONFIG=$CONFIGROOT # nvim specs its own subdir.
 export TMUX_HOME=$CONFIGROOT/tmux
 
 # Replace oldvim
