@@ -107,7 +107,8 @@ return require('packer').startup(function(use)
 
     use 'tpope/vim-obsession'
 
-    use 'dense-analysis/ale'
+    -- disable temporarily
+    -- use 'dense-analysis/ale'
 
     -- This  is dangerous though: It opens a new buffer with the original contents. Do not close the wrong one or you might lose data. Better not use it.
     --use 'JBarberU/vim-diffsaved'
