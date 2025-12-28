@@ -12,21 +12,66 @@ return {
   -- },
 
   
+  -- GitCommands
   {
     'tpope/vim-fugitive'
   },
 
+  -- git tools:show change symbols
   {
-    'airblade/vim-gitgutter'
+    'airblade/vim-gitgutter',
   },
-    -- Fancier statusline
+      
+  -- Fancier statusline
   {
     'nvim-lualine/lualine.nvim',
-    dependencies = { 'kyazdani42/nvim-web-devicons', opt = true },
   },
 
+  -- quick grep to quicklist
+  {"jremmen/vim-ripgrep"},
+
+  -- Netrw bindings
+  {"tpope/vim-vinegar"},
+
+
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ':TSUpdate',
+    opts = {
+      ensure_installed = {
+        "bash",
+        "html",
+        "javascript",
+        "json",
+        "lua",
+        "markdown",
+        "markdown_inline",
+        "python",
+        "query",
+        "regex",
+        "tsx",
+        "typescript",
+        "vim",
+        "yaml",
+        "systemverilog",
+        "verilog",
+      },
+    }
+  },
+
+  {
+    "kylechui/nvim-surround",
+    version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end
+  },
   --   -- add gruvbox
   --   { "ellisonleao/gruvbox.nvim" },
+
   --
   --   -- Configure LazyVim to load gruvbox
   --   {
@@ -178,17 +223,6 @@ return {
   --           return "😄"
   --         end,
   --       })
-  --     end,
-  --   },
-  --
-  --   -- or you can return new options to override all the defaults
-  --   {
-  --     "nvim-lualine/lualine.nvim",
-  --     event = "VeryLazy",
-  --     opts = function()
-  --       return {
-  --         --[[add your custom lualine config here]]
-  --       }
   --     end,
   --   },
   --
