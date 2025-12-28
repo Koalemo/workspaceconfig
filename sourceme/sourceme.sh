@@ -45,6 +45,8 @@ ROOT="$ROOT/.."
 
 # Run in place verilator
 export VERILATOR_ROOT=$ROOT/DEPS/verilator
+# Put this verilator at the top of the path
+export PATH=$VERILATOR_ROOT/bin:$PATH
 
 #Update path only if we haven't done that yet.
 if [[ -z "$WORKSPACE_SET" ]]; then
@@ -53,7 +55,8 @@ if [[ -z "$WORKSPACE_SET" ]]; then
         echo WARNING: variable TOOLS_PATH is not set.
     else
         # Export binaries from local tools to path
-        export PATH=$PATH"$(find "$TOOLS_PATH" -type d -name bin -printf ':%p')"
+        # export PATH=$PATH"$(find "$TOOLS_PATH" -type d -name bin -printf ':%p')"
+        echo WARNING: Not exporting tools. Use export-bin script
     fi
 
     if [[ -z $GOPATH ]]; then
@@ -74,9 +77,9 @@ if [[ -z "$WORKSPACE_SET" ]]; then
     fi
     #
     # Export binaries from workspaceconfig repo to path
-    export PATH="$(find "$ROOT" -type d -name bin -printf '%p:')"$PATH
-    # highest prio: the bins directly in the bin wrapper dir
-    export  PATH=$ROOT/bin:$PATH
+    export  PATH=$ROOT/bin:$ROOT/DEPS/neovim/bin:$PATH
+
+    #export PATH="$(find "$ROOT" -type d -name bin -printf '%p:')"$PATH
 fi
 
 
