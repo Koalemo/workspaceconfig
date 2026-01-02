@@ -83,7 +83,18 @@ return {
       add_default_keybindings = true, -- Add default keybindings
       copy_to_clipboard = false, -- Copy glyph to clipboard instead of inserting
       copy_register = '+', -- Register to use for copying (if `copy_to_clipboard` is true)
-    },
+    }
+  },
+
+  -- Markdown preview
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = "cd app && yarn install",
+    init = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
   },
 
   --   -- add gruvbox
