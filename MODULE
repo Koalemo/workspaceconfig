@@ -9,7 +9,7 @@ dependencies:
   OpenSTA:
     url: git@github.com:The-OpenROAD-Project/OpenSTA.git
     version: origin/master
-    hash: 9c9b5659d6a7ecbe02ea1204aa89079a77db1d3e
+    hash: 638c03a1c9a9b093fc94a49d3e0c7a7a3fdf001e
     type: git
   dbt-rules:
     url: https://github.com/daedaleanai/dbt-rules.git
@@ -24,12 +24,12 @@ dependencies:
   dwm:
     url: git@github.com:koalemo/dwm
     version: origin/dev
-    hash: 20b4658e1d5092db25bc06e750ad0f9fc2bfd986
+    hash: ee5a82d5892ad57b2c4e957881ecdd6f10f4315c
     type: git
   dwmblocks-async:
     url: git@github.com:/koalemo/dwmblocks-async.git
     version: origin/dev
-    hash: 6101b80258994b62ed385bf8c06993ab323d70ad
+    hash: f37f8a1e96da8f9a02407d5ae9fe671db221b5f7
     type: git
   neovim:
     url: https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-x86_64.tar.gz
@@ -44,7 +44,7 @@ dependencies:
   qutebrowser:
     url: git@github.com:qutebrowser/qutebrowser.git
     version: origin/main
-    hash: b417f2a23ba05fe1f0e840c25e1dbaeecb1e63b9
+    hash: 5d14f90ded9377b857dbe1147297d5e33535494a
     type: git
   ripgrep:
     url: https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz
@@ -54,7 +54,7 @@ dependencies:
   scripts:
     url: git@github.com:koalemo/scripts
     version: origin/master
-    hash: 92d266dc0a5375931112ba24bca7975d3834f672
+    hash: d4bafd399e01390d3a8ed78a357267c58ecf1838
     type: git
   st:
     url: https://git.suckless.org/st
@@ -79,11 +79,11 @@ dependencies:
   verilator:
     url: git@github.com:verilator/verilator.git
     version: origin/master
-    hash: e01f0f5e674535a457e0804e797de5af55ba7009
+    hash: ddbcd66722eeab15795eff254b2e5a5cf81235ae
     type: git
   xpra:
     url: https://github.com/Xpra-org/xpra.git
     version: origin/master
-    hash: c4a4bbfef144d054aca7f8845d5d8051528a7955
+    hash: eb368f9857d80f0a81d16e6184cbd5f4018af8b5
     type: ""
 flags: {}
