@@ -24,7 +24,7 @@ dependencies:
   dwm:
     url: git@github.com:koalemo/dwm
     version: origin/dev
-    hash: ee5a82d5892ad57b2c4e957881ecdd6f10f4315c
+    hash: fed1955889f9e3476bcb5e3bbd5b1cd58f6e2c89
     type: git
   dwmblocks-async:
     url: git@github.com:/koalemo/dwmblocks-async.git
