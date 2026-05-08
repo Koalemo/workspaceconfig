@@ -21,6 +21,16 @@ dependencies:
     version: origin/master
     hash: 8b48986f4c730725367e2865e5ea24931855018f
     type: git
+  dwl:
+    url: https://codeberg.org/dwl/dwl.git
+    version: v0.8
+    hash: 9b11a49cb757b80f8589088b487b5f1e56643aa1
+    type: ""
+  dwl-patches:
+    url: https://codeberg.org/dwl/dwl-patches.git
+    version: origin/main
+    hash: 5d2f27a9f96bb6c6a73e217f9278ff317b7c9b42
+    type: ""
   dwm:
     url: git@github.com:koalemo/dwm
     version: origin/dev
@@ -81,6 +91,11 @@ dependencies:
     version: origin/master
     hash: ddbcd66722eeab15795eff254b2e5a5cf81235ae
     type: git
+  wlroots:
+    url: https://gitlab.freedesktop.org/wlroots/wlroots.git
+    version: origin/0.20
+    hash: c1d38536c926134698ff2615843e0d4103e84ac4
+    type: ""
   xpra:
     url: https://github.com/Xpra-org/xpra.git
     version: origin/master
