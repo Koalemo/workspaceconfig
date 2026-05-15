@@ -92,13 +92,15 @@ export CONFIGROOT=$ROOT/config
 export SCREENRC=$CONFIGROOT/screen/screenrc
 export NVIMCONFIG=$CONFIGROOT # nvim specs its own subdir.
 export TMUX_HOME=$CONFIGROOT/tmux
+export XDG_CONFIG_HOME=$CONFIGROOT
+export XDG_DATA_HOME=$CONFIGROOT/share
 
 # Replace oldvim
 echo "Setting aliases"
-alias nvim="XDG_DATA_HOME=$NVIMCONFIG/share XDG_CONFIG_HOME=$NVIMCONFIG nvim"
-alias vim="XDG_DATA_HOME=$NVIMCONFIG/share XDG_CONFIG_HOME=$NVIMCONFIG nvim"
-alias vi="XDG_DATA_HOME=$NVIMCONFIG/share XDG_CONFIG_HOME=$NVIMCONFIG nvim"
-alias vimdiff="XDG_DATA_HOME=$NVIMCONFIG/share XDG_CONFIG_HOME=$NVIMCONFIG nvim -d"
+alias nvim=nvim
+alias vim=nvim
+alias vi=nvim
+alias vimdiff="nvim -d"
 export EDITOR=nvim
 
 #shortcuts to open files in new split / tab
