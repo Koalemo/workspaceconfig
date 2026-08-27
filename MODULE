@@ -64,7 +64,7 @@ dependencies:
   scripts:
     url: git@github.com:koalemo/scripts
     version: origin/master
-    hash: a824136a2348c4574595b3a393d0dda5b49a9584
+    hash: ab5e96da18b2196a6c7396886ee4aa46e1be4a5c
     type: git
   st:
     url: https://git.suckless.org/st

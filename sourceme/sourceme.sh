@@ -86,6 +86,12 @@ if [[ -z "$WORKSPACE_SET" ]]; then
     #export PATH="$(find "$ROOT" -type d -name bin -printf '%p:')"$PATH
 fi
 
+if [ "$XDG_SESSION_DESKTOP" == "dwl" ]; then
+  export menu='wmenu'
+else
+  export menu='dmenu'
+fi
+
 
 # Export configuration paths
 export CONFIGROOT=$ROOT/config
