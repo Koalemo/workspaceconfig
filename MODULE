@@ -42,9 +42,9 @@ dependencies:
     hash: f37f8a1e96da8f9a02407d5ae9fe671db221b5f7
     type: git
   neovim:
-    url: https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-x86_64.tar.gz
-    version: origin/master
-    hash: b2f91117be5b5ea39edd7297156dc2a4a8df4add6c95a90809a8df19e7ab6f52
+    url: https://github.com/neovim/neovim/releases/download/v0.12.5/nvim-linux-x86_64.tar.gz
+    version: origin/main
+    hash: bce0f56eda1f1b1db6eee8f4133d7a38813ea07933837dd1777411ca384c6875
     type: ""
   oss-cad-suite-build:
     url: https://github.com/YosysHQ/oss-cad-suite-build/releases/download/2025-12-04/oss-cad-suite-linux-x64-20251204.tgz
@@ -64,7 +64,7 @@ dependencies:
   scripts:
     url: git@github.com:koalemo/scripts
     version: origin/master
-    hash: ab5e96da18b2196a6c7396886ee4aa46e1be4a5c
+    hash: df603d5e7cfaf0957873105af33e416413c1b2aa
     type: git
   st:
     url: https://git.suckless.org/st
