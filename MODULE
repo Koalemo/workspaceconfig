@@ -1,46 +1,6 @@
 version: 3
 layout: ""
 dependencies:
-  OpenROAD-flow-scripts:
-    url: git@github.com:The-OpenROAD-Project/OpenROAD-flow-scripts.git
-    version: origin/master
-    hash: cabb23df1d101fadb7a7f8654b6cd259064840c2
-    type: git
-  OpenSTA:
-    url: git@github.com:The-OpenROAD-Project/OpenSTA.git
-    version: origin/master
-    hash: 67667792db29c5edd41fa26c9201b25bbddb9f91
-    type: git
-  dbt-rules:
-    url: https://github.com/daedaleanai/dbt-rules.git
-    version: origin/master
-    hash: 8e01e748f95ad38a2dd7fc03dd14d54eb6f6e0ad
-    type: ""
-  dmenu:
-    url: git://git.suckless.org/dmenu
-    version: origin/master
-    hash: 7175c4880bac3d2a2d4a6262b59193f0a38e2fdb
-    type: git
-  dwl:
-    url: https://codeberg.org/dwl/dwl.git
-    version: v0.8
-    hash: 9b11a49cb757b80f8589088b487b5f1e56643aa1
-    type: ""
-  dwl-patches:
-    url: https://codeberg.org/dwl/dwl-patches.git
-    version: origin/main
-    hash: 5d2f27a9f96bb6c6a73e217f9278ff317b7c9b42
-    type: ""
-  dwm:
-    url: git@github.com:koalemo/dwm
-    version: origin/dev
-    hash: fed1955889f9e3476bcb5e3bbd5b1cd58f6e2c89
-    type: git
-  dwmblocks-async:
-    url: git@github.com:/koalemo/dwmblocks-async.git
-    version: origin/dev
-    hash: f37f8a1e96da8f9a02407d5ae9fe671db221b5f7
-    type: git
   neovim:
     url: https://github.com/neovim/neovim/releases/download/v0.12.5/nvim-linux-x86_64.tar.gz
     version: origin/main
@@ -51,46 +11,16 @@ dependencies:
     version: origin/master
     hash: 1f562852b52c103e18f9d259524cbef0f77f7add73bb64503006e69aa5e9f0db
     type: tar.gz
-  qutebrowser:
-    url: git@github.com:qutebrowser/qutebrowser.git
-    version: origin/main
-    hash: c9e03ae5db592c03254d4eca196062d2ce358dc8
-    type: git
   ripgrep:
     url: https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep-13.0.0-x86_64-unknown-linux-musl.tar.gz
     version: origin/master
     hash: ee4e0751ab108b6da4f47c52da187d5177dc371f0f512a7caaec5434e711c091
     type: ""
-  scripts:
-    url: git@github.com:koalemo/scripts
-    version: origin/master
-    hash: df603d5e7cfaf0957873105af33e416413c1b2aa
-    type: git
-  st:
-    url: https://git.suckless.org/st
-    version: origin/master
-    hash: 688f70add0d1da8a416bf7df763328d694a24a3a
-    type: git
-  sv2v:
-    url: git@github.com:zachjs/sv2v.git
-    version: origin/master
-    hash: 6662fa5da71f87797598060f17728b284b99a9fc
-    type: git
   tmux:
     url: https://github.com/tmux/tmux/releases/download/3.3a/tmux-3.3a.tar.gz
     version: origin/master
     hash: e4fd347843bd0772c4f48d6dde625b0b109b7a380ff15db21e97c11a4dcdf93f
     type: ""
-  tpm:
-    url: https://github.com/tmux-plugins/tpm.git
-    version: origin/master
-    hash: 99469c4a9b1ccf77fade25842dc7bafbc8ce9946
-    type: ""
-  verilator:
-    url: git@github.com:verilator/verilator.git
-    version: origin/master
-    hash: f9427c6d5f7a1d16e13b90bad4ca39367d88592a
-    type: git
   wlroots:
     url: https://gitlab.freedesktop.org/wlroots/wlroots.git
     version: origin/0.20

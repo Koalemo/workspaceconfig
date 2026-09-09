@@ -1,0 +1,27 @@
+[submodule "deps/dwl"]
+	path = deps/dwl
+	url = git@github.com:koalemo/dwl.git
+[submodule "deps/OpenROAD-flow-scripts"]
+	path = deps/OpenROAD-flow-scripts
+	url = git@github.com:The-OpenROAD-Project/OpenROAD-flow-scripts.git
+[submodule "deps/OpenSTA"]
+	path = deps/OpenSTA
+	url = git@github.com:The-OpenROAD-Project/OpenSTA.git
+[submodule "deps/dwl-patches"]
+	path = deps/dwl-patches
+	url = https://codeberg.org/dwl/dwl-patches.git
+[submodule "deps/qutebrowser"]
+	path = deps/qutebrowser
+	url = git@github.com:qutebrowser/qutebrowser.git
+[submodule "deps/scripts"]
+	path = deps/scripts
+	url = git@github.com:koalemo/scripts
+[submodule "deps/sv2v"]
+	path = deps/sv2v
+	url = git@github.com:zachjs/sv2v.git
+[submodule "deps/tpm"]
+	path = deps/tpm
+	url = https://github.com/tmux-plugins/tpm.git
+[submodule "deps/verilator"]
+	path = deps/verilator
+	url = git@github.com:verilator/verilator.git
