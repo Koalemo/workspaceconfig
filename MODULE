@@ -56,6 +56,11 @@ dependencies:
     version: origin/master
     hash: 6662fa5da71f87797598060f17728b284b99a9fc
     type: git
+  tpm:
+    url: https://github.com/tmux-plugins/tpm.git
+    version: origin/master
+    hash: 99469c4a9b1ccf77fade25842dc7bafbc8ce9946
+    type: ""
   verilator:
     url: git@github.com:verilator/verilator.git
     version: origin/master
