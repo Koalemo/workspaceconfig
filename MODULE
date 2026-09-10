@@ -16,11 +16,6 @@ dependencies:
     version: origin/master
     hash: 8e01e748f95ad38a2dd7fc03dd14d54eb6f6e0ad
     type: ""
-  dmenu:
-    url: git://git.suckless.org/dmenu
-    version: origin/master
-    hash: 7175c4880bac3d2a2d4a6262b59193f0a38e2fdb
-    type: git
   dwl:
     url: https://codeberg.org/dwl/dwl.git
     version: v0.8
@@ -31,16 +26,6 @@ dependencies:
     version: origin/main
     hash: 5d2f27a9f96bb6c6a73e217f9278ff317b7c9b42
     type: ""
-  dwm:
-    url: git@github.com:koalemo/dwm
-    version: origin/dev
-    hash: fed1955889f9e3476bcb5e3bbd5b1cd58f6e2c89
-    type: git
-  dwmblocks-async:
-    url: git@github.com:/koalemo/dwmblocks-async.git
-    version: origin/dev
-    hash: f37f8a1e96da8f9a02407d5ae9fe671db221b5f7
-    type: git
   neovim:
     url: https://github.com/neovim/neovim/releases/download/v0.12.5/nvim-linux-x86_64.tar.gz
     version: origin/main
@@ -66,26 +51,11 @@ dependencies:
     version: origin/master
     hash: df603d5e7cfaf0957873105af33e416413c1b2aa
     type: git
-  st:
-    url: https://git.suckless.org/st
-    version: origin/master
-    hash: 688f70add0d1da8a416bf7df763328d694a24a3a
-    type: git
   sv2v:
     url: git@github.com:zachjs/sv2v.git
     version: origin/master
     hash: 6662fa5da71f87797598060f17728b284b99a9fc
     type: git
-  tmux:
-    url: https://github.com/tmux/tmux/releases/download/3.3a/tmux-3.3a.tar.gz
-    version: origin/master
-    hash: e4fd347843bd0772c4f48d6dde625b0b109b7a380ff15db21e97c11a4dcdf93f
-    type: ""
-  tpm:
-    url: https://github.com/tmux-plugins/tpm.git
-    version: origin/master
-    hash: 99469c4a9b1ccf77fade25842dc7bafbc8ce9946
-    type: ""
   verilator:
     url: git@github.com:verilator/verilator.git
     version: origin/master
@@ -95,10 +65,5 @@ dependencies:
     url: https://gitlab.freedesktop.org/wlroots/wlroots.git
     version: origin/0.20
     hash: c1d38536c926134698ff2615843e0d4103e84ac4
-    type: ""
-  xpra:
-    url: https://github.com/Xpra-org/xpra.git
-    version: origin/master
-    hash: 1e11a7022f1417bbc4b8dd50060a04f982a068d5
     type: ""
 flags: {}
