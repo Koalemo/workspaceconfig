@@ -34,6 +34,10 @@ return {
   {"tpope/vim-vinegar"},
 
 
+  {'simnalamburt/vim-mundo',
+    lazy = false
+  },
+
   {
     "nvim-treesitter/nvim-treesitter",
     build = ':TSUpdate',
