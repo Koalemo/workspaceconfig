@@ -19,7 +19,7 @@ dependencies:
   dwl:
     url: git@github.com:Koalemo/dwl.git
     version: origin/dev
-    hash: a686c38036753a7a5b5680ec44edfb5f4e427365
+    hash: 
     type: ""
   dwl-patches:
     url: https://codeberg.org/dwl/dwl-patches.git
@@ -66,4 +66,9 @@ dependencies:
     version: origin/master
     hash: f9427c6d5f7a1d16e13b90bad4ca39367d88592a
     type: git
+  wlock:
+    url: https://codeberg.org/sewn/wlock.git
+    version: origin/master
+    hash: c1d159a83391b11efbd85e76c30e8d39ae66e2dd
+    type: ""
 flags: {}
