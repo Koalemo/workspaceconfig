@@ -40,6 +40,8 @@ vim.opt.showtabline=2
 
 vim.opt.wrap = true
 
+vim.opt.hlsearch = true
+
 -- Don't lose selection when shifting sideways
 vim.keymap.set("x", "<", "<gv")
 vim.keymap.set("x", ">", ">gv")
