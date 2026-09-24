@@ -5,13 +5,13 @@
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
 return {
-	
+
   -- {
   --   "nvim-treesitter/nvim-treesitter-textobjects", version = 'main',
   --   dependencies = "nvim-treesitter/nvim-treesitter",
   -- },
 
-  
+
   -- GitCommands
   {
     'tpope/vim-fugitive'
@@ -21,7 +21,7 @@ return {
   {
     'airblade/vim-gitgutter',
   },
-      
+
   -- Fancier statusline
   {
     'nvim-lualine/lualine.nvim',
@@ -44,6 +44,7 @@ return {
     lazy = false,
     opts = {
       ensure_installed = {
+        "c++",
         "bash",
         "html",
         "javascript",
@@ -75,8 +76,8 @@ return {
       })
     end
   },
-  
-  -- nerdfonts 
+
+  -- nerdfonts
   {
     '2kabhishek/nerdy.nvim',
     dependencies = {
