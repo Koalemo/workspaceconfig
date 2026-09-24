@@ -52,8 +52,8 @@ export PATH=$VERILATOR_ROOT/bin:$PATH
 if [[ -z "$WORKSPACE_SET" ]]; then
 
     if [[ -z $TOOLS_PATH ]]; then
-        echo WARNING: variable TOOLS_PATH is not set. using default: ~/tools
-	export TOOLS_PATH=$HOME/tools
+      echo WARNING: variable TOOLS_PATH is not set. using default: ~/tools
+	    export TOOLS_PATH=$HOME/tools
     fi
     # Export binaries from local tools to path
     # export PATH=$PATH"$(find "$TOOLS_PATH" -type d -name bin -printf ':%p')"
@@ -61,9 +61,9 @@ if [[ -z "$WORKSPACE_SET" ]]; then
 
     if [[ -z $GOPATH ]]; then
     	echo "WARNING: variable GOPATH is not set. setting default: ~/go"
-	export GOPATH=$HOME/go
+	    export GOPATH=$HOME/go
     fi
-    export PATH=$GOPATH/bin:$PATH
+
 
     if [[ -z $VERILATOR_ROOT ]]; then
         echo "WARNING: variable VERILATOR_ROOT is not set."
@@ -72,10 +72,11 @@ if [[ -z "$WORKSPACE_SET" ]]; then
     fi
 
     if [[ -z $CARGOPATH ]]; then
-        echo "WARNING: variable CARGOPATH is not set."
-    else
-        export PATH=$CARGOPATH/bin:$PATH
+        echo "WARNING: variable CARGOPATH is not set. usign default: ~/.cargo"
+        export CARGOPATH=$HOME/.cargo
     fi
+
+    export PATH=$CARGOPATH/bin:$PATH
     #
     # Export binaries from workspaceconfig repo to path
     export  PATH=$ROOT/bin:$ROOT/DEPS/neovim/bin:$PATH

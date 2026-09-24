@@ -21,6 +21,26 @@ vim.api.nvim_create_autocmd('filetype', {
   end
 })
 
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'python', 'rust', 'lua' },
+  callback = function()
+    vim.treesitter.start()                            -- Highlighting
+    -- vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()' -- Folding
+    -- vim.wo.foldmethod = 'expr'
+    vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()" -- Indentation
+  end,
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'systemverilog', 'verilog' },
+  callback = function()
+    vim.treesitter.start()                            -- Highlighting
+    vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()' -- Folding
+    vim.wo.foldmethod = 'expr'
+    vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()" -- Indentation
+  end,
+})
+
 -- trim trailing whitespaces
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*",
