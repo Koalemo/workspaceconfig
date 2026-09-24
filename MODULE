@@ -19,7 +19,7 @@ dependencies:
   dwl:
     url: git@github.com:Koalemo/dwl.git
     version: origin/dev
-    hash: 
+    hash: 67249b41dbe2fdfa7d1a6c106fcd98a4ab6fc476
     type: ""
   dwl-patches:
     url: https://codeberg.org/dwl/dwl-patches.git
