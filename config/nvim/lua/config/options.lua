@@ -46,4 +46,6 @@ vim.opt.hlsearch = true
 vim.keymap.set("x", "<", "<gv")
 vim.keymap.set("x", ">", ">gv")
 
-vim.cmd "colorscheme torte"
+vim.cmd "colorscheme industry"
+
+vim.o.exrc=true
