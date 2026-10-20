@@ -65,6 +65,30 @@ return {
       scroll = { enabled = true },
       statuscolumn = { enabled = true },
       words = { enabled = true },
+
+      ------------------------------------------
+      -- zen window width -> max line length. --
+      ------------------------------------------
+      zen = {
+        win = {
+          keys = {
+            q = false,
+            ["<Esc>"] = function(self)
+              self:close()
+            end,
+          },
+          width = function()
+            local buf = vim.api.nvim_get_current_buf()
+            local max = 0
+            for _, l in ipairs(vim.api.nvim_buf_get_lines(buf, 0, -1, false)) do
+              max = math.max(max, vim.fn.strdisplaywidth(l))
+            end
+            -- +8: padding for number/signcolumn/foldcolumn
+            return math.min(max + 8, vim.o.columns)
+          end,
+          wo = { wrap = false }, -- belt-and-suspenders
+        },
+      },
     },
     keys = {
       -- Top Pickers & Explorer
