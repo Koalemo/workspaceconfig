@@ -48,7 +48,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 -- Per-filetype colorschemes via window highlight namespaces (Nvim 0.10+)
 local ft_colors = {
   -- python        = "habamax",
-  -- lua           = "darkblue",
+  lua           = "darkblue",
   rust          = "darkblue",
   verilog       = "slate",
   systemverilog = "slate",
@@ -78,24 +78,51 @@ local function dim_color(hex, f)
   return r * 65536 + g * 256 + b
 end
 
+local BG_GROUPS = { "Normal", "NormalNC", "NonText", "EndOfBuffer",
+                    "SignColumn", "LineNr", "CursorLine", "WinBar" }
+
 local function build_ns(scheme)
   local full  = vim.api.nvim_create_namespace("ft_" .. scheme)
   local muted = vim.api.nvim_create_namespace("ft_" .. scheme .. "_muted")
+
   if pcall(vim.cmd.colorscheme, scheme) then
-    for name, def in pairs(vim.api.nvim_get_hl(0, {})) do
-      vim.api.nvim_set_hl(full, name, def)
-      local m = vim.tbl_extend("force", {}, def)
-      m.fg = mute_color(def.fg, 0.35)   -- 35% saturation for unfocused
-      m.bg = dim_color(def.bg, 0.99)
-      m.sp = mute_color(def.sp, 0.35)
+    local groups = vim.api.nvim_get_hl(0, {})
+
+    -- seed bg/fg for groups that paint the window background
+    local normal = groups.Normal or {}
+    for _, g in ipairs(BG_GROUPS) do
+      groups[g] = groups[g] or {}
+      if groups[g].bg == nil then groups[g].bg = normal.bg end
+      if groups[g].fg == nil then groups[g].fg = normal.fg end
+    end
+
+    local function resolve(def, depth)
+      if def.link and depth < 10 then
+        return resolve(groups[def.link] or {}, depth + 1)
+      end
+      return def
+    end
+
+    for name, def in pairs(groups) do
+      local r = resolve(def, 0)
+      r.link, r.cterm = nil, nil
+
+      vim.api.nvim_set_hl(full, name, r)
+
+      local m = vim.tbl_extend("force", {}, r)
+      m.fg = mute_color(r.fg, 0.35)
+      m.bg = dim_color(r.bg, 0.55)
+      m.sp = mute_color(r.sp, 0.35)
       m.bold, m.italic, m.underline = false, false, false
       vim.api.nvim_set_hl(muted, name, m)
     end
+
   else
     vim.api.nvim_del_namespace(full)
     vim.api.nvim_del_namespace(muted)
     full, muted = 0, 0
   end
+
   ns_full[scheme], ns_muted[scheme] = full, muted
 end
 
