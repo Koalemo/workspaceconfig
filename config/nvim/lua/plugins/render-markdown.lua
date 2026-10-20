@@ -31,15 +31,17 @@ return {
             wrap = true,                              -- not in documented defaults
         },
 
-        anti_conceal = {
-            disabled_modes = { 'n' },  -- no hover-reveal in normal mode
-        },
-
         indent = {
             enabled = true,                           -- default: false
             render_modes = true,                      -- default: false
             skip_heading = true,                      -- default: false
         },
+
+        anti_conceal = {
+            disabled_modes = { 'n' },  -- no hover-reveal in normal mode (especially for tables)
+            ignore = { indent = false }, -- ignore the virtual indent on hovering -> visual selection visible on empty lines.
+        },
+
     }
   }
 }
