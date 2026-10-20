@@ -30,7 +30,14 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float)
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
+vim.keymap.set("n", "<leader>q", function()
+  local winid = vim.fn.getloclist(0, { winid = 0 }).winid
+  if winid ~= 0 then
+    vim.cmd("lclose")
+  else
+    vim.diagnostic.setloclist()
+  end
+end, { desc = "Toggle location list (diagnostics)" })
 
 -- Change directory
 vim.keymap.set('n', '<leader>cd', ':cd %:p:h<CR>:pwd<CR>')
