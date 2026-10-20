@@ -59,8 +59,8 @@ local ft_colors = {
   -- python        = "habamax",
   lua           = "darkblue",
   rust          = "darkblue",
-  verilog       = "slate",
-  systemverilog = "slate",
+  verilog       = "torte",
+  systemverilog = "torte",
   markdown      = "habamax",
 }
 local default_scheme = "torte"   -- matches options.lua
@@ -125,6 +125,11 @@ local function build_ns(scheme)
       m.bold, m.italic, m.underline = false, false, false
       vim.api.nvim_set_hl(muted, name, m)
     end
+
+    local mp = groups.MatchParen or {}
+    local mp_bg = mp.bg or 0x5f5f5f
+    vim.api.nvim_set_hl(full,  "MatchParen", { bg = mp_bg, bold = true })
+    vim.api.nvim_set_hl(muted, "MatchParen", { bg = dim_color(mp_bg, 0.8), bold = true })
 
   else
     vim.api.nvim_del_namespace(full)
