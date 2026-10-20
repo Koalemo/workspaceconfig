@@ -44,8 +44,24 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*",
     command = [[%s/\s\+$//e]],
 })
+-------------------------------
+-- Override search highlight --
+-------------------------------
+local function set_search_hl()
+  vim.api.nvim_set_hl(0, "Search",     { fg = "#000000", bg = "#ffd75f" })
+  vim.api.nvim_set_hl(0, "CurSearch",  { fg = "#000000", bg = "#ff8700", bold = true })
+  vim.api.nvim_set_hl(0, "IncSearch",  { link = "CurSearch" })
+  vim.api.nvim_set_hl(0, "Substitute", { fg = "#000000", bg = "#87afff" })
+end
 
--- Per-filetype colorschemes via window highlight namespaces (Nvim 0.10+)
+set_search_hl()
+vim.api.nvim_create_autocmd("ColorScheme", {
+  callback = set_search_hl,
+})
+
+----------------------------------------------------------------------------
+-- Per-filetype colorschemes via window highlight namespaces (Nvim 0.10+) --
+----------------------------------------------------------------------------
 local ft_colors = {
   -- python        = "habamax",
   lua           = "darkblue",
@@ -146,7 +162,8 @@ local function is_overlay_win()
       and (vim.bo.buftype ~= ""
            or vim.bo.filetype == ""
            or vim.bo.filetype == "diff"          -- git hunk previews
-           or vim.w.snacks_picker ~= nil)         -- snacks picker/preview windows
+           or vim.w.snacks_picker ~= nil         -- snacks picker/preview windows
+           or bt == "quickfix")                  -- qf + loclist windows
 end
 
 vim.api.nvim_create_autocmd({ "BufWinEnter", "WinEnter", "FileType" }, {
