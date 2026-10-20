@@ -141,10 +141,12 @@ local function set_ns(ns)
 end
 
 local function is_overlay_win()
-  -- floats that aren't showing a real file buffer (zen backdrop, pickers, notifs)
   local cfg = vim.api.nvim_win_get_config(0)
   return cfg.relative ~= ""
-      and (vim.bo.filetype == "" or vim.bo.buftype ~= "")
+      and (vim.bo.buftype ~= ""
+           or vim.bo.filetype == ""
+           or vim.bo.filetype == "diff"          -- git hunk previews
+           or vim.w.snacks_picker ~= nil)         -- snacks picker/preview windows
 end
 
 vim.api.nvim_create_autocmd({ "BufWinEnter", "WinEnter", "FileType" }, {
