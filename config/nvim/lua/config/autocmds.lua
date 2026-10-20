@@ -140,11 +140,27 @@ local function set_ns(ns)
   if ns ~= 0 then pcall(vim.api.nvim_win_set_hl_ns, 0, ns) end
 end
 
--- focused: full scheme
+local function is_overlay_win()
+  -- floats that aren't showing a real file buffer (zen backdrop, pickers, notifs)
+  local cfg = vim.api.nvim_win_get_config(0)
+  return cfg.relative ~= ""
+      and (vim.bo.filetype == "" or vim.bo.buftype ~= "")
+end
+
 vim.api.nvim_create_autocmd({ "BufWinEnter", "WinEnter", "FileType" }, {
-  callback = function() set_ns(ns_full[win_scheme()]) end,
+  callback = function()
+    if is_overlay_win() then
+      pcall(vim.api.nvim_win_set_hl_ns, 0, 0)
+      return
+    end
+    set_ns(ns_full[win_scheme()])
+  end,
 })
--- unfocused: muted version of the same scheme
+
 vim.api.nvim_create_autocmd("WinLeave", {
-  callback = function() set_ns(ns_muted[win_scheme()]) end,
+  callback = function()
+    if is_overlay_win() then return end
+    set_ns(ns_muted[win_scheme()])
+  end,
 })
+
