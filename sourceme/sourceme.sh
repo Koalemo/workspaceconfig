@@ -84,6 +84,7 @@ if [[ -z "$WORKSPACE_SET" ]]; then
     # Export dmenu scripts to path
     # TODO: find a better solution
     export PATH=$ROOT/DEPS/scripts/shortcut-menus:$PATH
+    export PATH=$ROOT/DEPS/scripts/bin:$PATH
 
     #export PATH="$(find "$ROOT" -type d -name bin -printf '%p:')"$PATH
 fi
