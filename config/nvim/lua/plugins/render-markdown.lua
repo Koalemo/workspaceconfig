@@ -31,6 +31,10 @@ return {
             wrap = true,                              -- not in documented defaults
         },
 
+        anti_conceal = {
+            disabled_modes = { 'n' },  -- no hover-reveal in normal mode
+        },
+
         indent = {
             enabled = true,                           -- default: false
             render_modes = true,                      -- default: false
