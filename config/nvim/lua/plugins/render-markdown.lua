@@ -1,7 +1,10 @@
 return {
   {
     'MeanderingProgrammer/render-markdown.nvim',
-    ft = { "markdown", "Avante" },
+    ft = { "vimwiki", "markdown", "Avante" },
+    keys = {
+        { '<leader>bt', '<cmd>RenderMarkdown buf_toggle<cr>', desc = 'Toggle markdown rendering (buffer)' },
+    },
     opts = {
         file_types = { "markdown", "Avante" },        -- default: { 'markdown' }
         completions = { lsp = { enabled = true } },   -- default: false
