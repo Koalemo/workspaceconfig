@@ -11,7 +11,10 @@ return {
         },
 
         heading = {
-            icons = { '# ', '# ', '# ', '# ', '# ', '# ' }, -- default: nerd-font glyphs
+            render_modes = true,                      -- keep rendering in insert mode. no distracting highlight change.
+            icons = function(ctx)                     -- default: nerd-font glyphs
+                return string.rep('#', ctx.level) .. ' '
+            end,
             border = true,                            -- default: false
             border_prefix = true,                     -- default: false
             above = '-',                              -- default: '▄'
@@ -24,6 +27,7 @@ return {
         },
 
         pipe_table = {
+            render_modes = true,                      -- keep borders in insert mode (no visual jump)
             wrap = true,                              -- not in documented defaults
         },
 
