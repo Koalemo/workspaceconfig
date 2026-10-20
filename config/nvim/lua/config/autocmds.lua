@@ -39,11 +39,18 @@ vim.api.nvim_create_autocmd('FileType', {
   end,
 })
 
--- trim trailing whitespaces
+---------------------------------------------------------------
+-- trim trailing whitespaces without moving the cursor/view  --
+---------------------------------------------------------------
 vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = "*",
-    command = [[%s/\s\+$//e]],
+  pattern = "*",
+  callback = function()
+    local view = vim.fn.winsaveview()
+    vim.cmd([[%s/\s\+$//e]])
+    vim.fn.winrestview(view)
+  end,
 })
+
 -------------------------------
 -- Override search highlight --
 -------------------------------
