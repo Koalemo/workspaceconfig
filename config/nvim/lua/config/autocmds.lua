@@ -47,41 +47,77 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 
 -- Per-filetype colorschemes via window highlight namespaces (Nvim 0.10+)
 local ft_colors = {
-  python        = "habamax",
-  lua           = "desert",
-  rust          = "retrobox",
+  -- python        = "habamax",
+  -- lua           = "darkblue",
+  rust          = "darkblue",
   verilog       = "slate",
   systemverilog = "slate",
-  markdown      = "peachpuff",
+  markdown      = "habamax",
 }
 local default_scheme = "torte"   -- matches options.lua
-local ns_cache = {}              -- scheme -> namespace id
+local ns_full  = {}              -- scheme -> normal ns
+local ns_muted = {}              -- scheme -> muted ns
 
-local function scheme_ns(scheme)
-  if ns_cache[scheme] then return ns_cache[scheme] end
+-- gray-mix a "#rrggbb" color; t=0 → gray, t=1 → original
+local function mute_color(hex, t)
+  if type(hex) ~= "number" then return hex end
+  local r = math.floor(hex / 65536) % 256
+  local g = math.floor(hex / 256) % 256
+  local b = hex % 256
+  local lum = math.floor(0.299 * r + 0.587 * g + 0.114 * b)
+  local mix = function(c) return math.floor(lum + (c - lum) * t + 0.5) end
+  return mix(r) * 65536 + mix(g) * 256 + mix(b)
+end
 
-  -- snapshot: apply scheme, copy all groups into a new namespace, restore
-  local prev = vim.g.colors_name or default_scheme
-  local ns = vim.api.nvim_create_namespace("ft_colors_" .. scheme)
+-- scale RGB by factor f (0 = black, 1 = unchanged) — keeps hue
+local function dim_color(hex, f)
+  if type(hex) ~= "number" then return hex end
+  local r = math.floor(math.floor(hex / 65536) % 256 * f + 0.5)
+  local g = math.floor(math.floor(hex / 256) % 256 * f + 0.5)
+  local b = math.floor(hex % 256 * f + 0.5)
+  return r * 65536 + g * 256 + b
+end
+
+local function build_ns(scheme)
+  local full  = vim.api.nvim_create_namespace("ft_" .. scheme)
+  local muted = vim.api.nvim_create_namespace("ft_" .. scheme .. "_muted")
   if pcall(vim.cmd.colorscheme, scheme) then
     for name, def in pairs(vim.api.nvim_get_hl(0, {})) do
-      vim.api.nvim_set_hl(ns, name, def)
+      vim.api.nvim_set_hl(full, name, def)
+      local m = vim.tbl_extend("force", {}, def)
+      m.fg = mute_color(def.fg, 0.35)   -- 35% saturation for unfocused
+      m.bg = dim_color(def.bg, 0.99)
+      m.sp = mute_color(def.sp, 0.35)
+      m.bold, m.italic, m.underline = false, false, false
+      vim.api.nvim_set_hl(muted, name, m)
     end
   else
-    vim.api.nvim_del_namespace(ns)
-    ns = 0
+    vim.api.nvim_del_namespace(full)
+    vim.api.nvim_del_namespace(muted)
+    full, muted = 0, 0
   end
-  pcall(vim.cmd.colorscheme, prev)
-  ns_cache[scheme] = ns
-  return ns
+  ns_full[scheme], ns_muted[scheme] = full, muted
 end
 
-local function apply_win_scheme()
-  local ft = vim.bo.filetype
-  local scheme = ft_colors[ft] or default_scheme
-  vim.api.nvim_win_set_hl_ns(0, scheme_ns(scheme))
+for _, s in pairs(ft_colors) do
+  if not ns_full[s] then build_ns(s) end
+end
+build_ns(default_scheme)
+pcall(vim.cmd.colorscheme, vim.g.colors_name or default_scheme) -- restore once
+
+local function win_scheme()
+  return ft_colors[vim.bo.filetype] or default_scheme
 end
 
-vim.api.nvim_create_autocmd({ "BufWinEnter", "FileType" }, {
-  callback = apply_win_scheme,
+local function set_ns(ns)
+  if ns ~= 0 then pcall(vim.api.nvim_win_set_hl_ns, 0, ns) end
+end
+
+-- focused: full scheme
+vim.api.nvim_create_autocmd({ "BufWinEnter", "WinEnter", "FileType" }, {
+  callback = function() set_ns(ns_full[win_scheme()]) end,
+})
+-- unfocused: muted version of the same scheme
+vim.api.nvim_create_autocmd("WinLeave", {
+  callback = function() set_ns(ns_muted[win_scheme()]) end,
 })
