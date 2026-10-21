@@ -5,7 +5,8 @@ return {
       "lua_ls",
       "rust_analyzer",
       "stylua",
-      "verible",
+      -- "verible",
+      -- "svlangserver",
     },
   },
   dependencies = {
