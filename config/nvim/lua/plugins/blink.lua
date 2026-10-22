@@ -49,10 +49,10 @@ return {
     completion = {
       menu = {
         -- Delay before showing the completion menu while typing
-        auto_show_delay_ms = 500,
+        -- auto_show_delay_ms = 500,
 
         -- never auto-open; press <C-space> to show
-        -- auto_show = false,
+        auto_show = false,
       },
       documentation = { auto_show = false },
 
