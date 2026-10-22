@@ -178,133 +178,83 @@ specs.
 
 `mapleader = " "` (space) [1](#19-0)
 
-#### Core config (nvim core, `keymaps.lua`)
+#### Core config (builtin, `keymaps.lua`)
 
 | Key | Mode | Action | Source |
 |---|---|---|---|
-| `h` `j` `k` `l` | n | Move left/down/up/right | nvim core |
-| `w` `b` `e` `ge` | n | Word motions | nvim core |
-| `0` `^` `$` `gg` `G` `{` `}` `%` | n | Line/file/paragraph motions, matching bracket | nvim core |
-| `f{x}` `t{x}` `;` `,` | n | Find/till char, repeat | nvim core |
-| `*` `#` | n | Search word under cursor fwd/back | nvim core |
-| `/` `?` | n | Search fwd / back | nvim core |
-| `i` `a` `o` `O` `I` `A` | n | Enter insert mode variants (`o`/`O` overridden by your custom binds) | nvim core |
-| `v` `V` `<C-v>` | n | Visual char / line / block | nvim core |
-| `d` `c` `y` `p` `P` `x` | n | Delete / change / yank / paste | nvim core |
-| `u` `<C-r>` `.` | n | Undo / redo / repeat last change | nvim core |
-| `>>` `<<` `==` | n | Indent / dedent / autoindent line | nvim core |
-| `zz` `zt` `zb` | n | Center / top / bottom cursor line | nvim core |
-| `<C-f>` `<C-b>` | n | Page down / up (`<C-d>`/`<C-u>` overridden by your centered variants) | nvim core |
-| `<C-w>w` `<C-w>v` `<C-w>s` `<C-w>q` `=` | n | Window cycle / vsplit / split / close / equalize | nvim core |
-| `gt` `gT` | n | Next / prev tab | nvim core |
-| `:marks`, `m{a-z}` `` `{a-z}` `` | n | Set / jump to mark | nvim core |
-| `q{a-z}` `@a` `@@` | n | Record / play macro | nvim core |
-| `<C-o>` `<C-i>` | n | Jump back / forward in jumplist | nvim core |
-| `<C-g>` | n | Show file info | nvim core |
-| `<C-\><C-n>` | t | Exit terminal mode | nvim core |
-| `~` `gu{motion}` `gU{motion}` | n | Swap / lower / upper case | nvim core |
-| `r{x}` `R` `s` `S` | n | Replace char / replace mode / substitute | nvim core |
-| `J` / `K` | v | Move selection down/up | custom |
-| `J` | n | Join lines, keep cursor | custom |
-| `<C-d>` / `<C-u>` | n | Half-page down/up, centered | custom |
-| `n` / `N` | n | Search match next/prev, centered + unfold | custom |
-| `<leader>p` | x | Paste over selection without yanking | custom |
-| `<leader>y` / `<leader>Y` | n, v / n | Yank / yank-line to system clipboard | custom |
-| `<leader>d` | n, v | Delete to black-hole register | custom |
-| `<leader>fmt` | n | LSP format | custom |
-| `<C-k>` / `<C-j>` | n | Quickfix next / prev | custom |
-| `<leader>k` / `<leader>j` | n | Loclist next / prev | custom |
-| `[d` / `]d` | n | Prev / next diagnostic | custom |
-| `<leader>e` | n | Diagnostic float | custom |
-| `<leader>q` | n | Diagnostics to loclist toggle| custom |
-| `<leader>cd` | n | `cd` to file's directory | custom |
-| `<leader>bc` / `<leader>bd` | n | Close / force-close buffer | custom |
-| `<leader>o` / `<leader>O` | n | Blank line below / above | custom |
-| `<C-l>` / `<C-h>` | n | Widen / narrow split | custom |
-| `<C-n>` / `<C-p>` | n | Grow / shrink split vertically | custom |
-| `<` / `>` | x | Indent, keep selection | custom |
-| `o` | n (netrw) | Open entry | custom|
+| `h` `j` `k` `l` | n | Move left/down/up/right | builtin |
+| `w` `b` `e` `ge` | n | Word motions | builtin |
+| `0` `^` `$` `gg` `G` `{` `}` `%` | n | Line/file/paragraph motions, matching bracket | builtin |
+| `f{x}` `t{x}` `;` `,` | n | Find/till char, repeat | builtin |
+| `*` `#` | n | Search word under cursor fwd/back | builtin |
+| `/` `?` | n | Search fwd / back | builtin |
+| `i` `a` `o` `O` `I` `A` | n | Enter insert mode variants (`o`/`O` overridden by your custom binds) | builtin |
+| `v` `V` `<C-v>` | n | Visual char / line / block | builtin |
+| `d` `c` `y` `p` `P` `x` | n | Delete / change / yank / paste | builtin |
+| `u` `<C-r>` `.` | n | Undo / redo / repeat last change | builtin |
+| `>>` `<<` `==` | n | Indent / dedent / autoindent line | builtin |
+| `zz` `zt` `zb` | n | Center / top / bottom cursor line | builtin |
+| `<C-f>` `<C-b>` | n | Page down / up (`<C-d>`/`<C-u>` overridden by your centered variants) | builtin |
+| `<C-w>w` `<C-w>v` `<C-w>s` `<C-w>q` `=` | n | Window cycle / vsplit / split / close / equalize | builtin |
+| `gt` `gT` | n | Next / prev tab | builtin |
+| `:marks`, `m{a-z}` `` `{a-z}` `` | n | Set / jump to mark | builtin |
+| `q{a-z}` `@a` `@@` | n | Record / play macro | builtin |
+| `<C-o>` `<C-i>` | n | Jump back / forward in jumplist | builtin |
+| `<C-g>` | n | Show file info | builtin |
+| `<C-\><C-n>` | t | Exit terminal mode | builtin |
+| `~` `gu{motion}` `gU{motion}` | n | Swap / lower / upper case | builtin |
+| `r{x}` `R` `s` `S` | n | Replace char / replace mode / substitute | builtin |
+| `J` / `K` | v | Move selection down/up | keymaps.lua |
+| `J` | n | Join lines, keep cursor | keymaps.lua |
+| `<C-d>` / `<C-u>` | n | Half-page down/up, centered | keymaps.lua |
+| `n` / `N` | n | Search match next/prev, centered + unfold | keymaps.lua |
+| `<leader>p` | x | Paste over selection without yanking | keymaps.lua |
+| `<leader>y` / `<leader>Y` | n, v / n | Yank / yank-line to system clipboard | keymaps.lua |
+| `<leader>d` | n, v | Delete to black-hole register | keymaps.lua |
+| `<leader>fmt` | n | LSP format | keymaps.lua |
+| `<C-k>` / `<C-j>` | n | Quickfix next / prev | keymaps.lua |
+| `<leader>k` / `<leader>j` | n | Loclist next / prev | keymaps.lua |
+| `[d` / `]d` | n | Prev / next diagnostic | keymaps.lua |
+| `<leader>e` | n | Diagnostic float | keymaps.lua |
+| `<leader>q` | n | Diagnostics to loclist toggle| keymaps.lua |
+| `<leader>cd` | n | `cd` to file's directory | keymaps.lua |
+| `<leader>bc` / `<leader>bd` | n | Close / force-close buffer | keymaps.lua |
+| `<leader>o` / `<leader>O` | n | Blank line below / above | keymaps.lua |
+| `<C-l>` / `<C-h>` | n | Widen / narrow split | keymaps.lua |
+| `<C-n>` / `<C-p>` | n | Grow / shrink split vertically | keymaps.lua |
+| `<` / `>` | x | Indent, keep selection | keymaps.lua |
+| `o` | n (netrw) | Open entry | keymaps.lua|
 #### LSP Keybinds (nvim core, `snacks.nvim`)
 
 
 | Key | Mode | Action | Source |
 |---|---|---|---|
-| `gd` | n | LSP definitions (picker) | custom/snacks.nvim - overrides builtin local-declaration `gd` |
-| `gD` | n | LSP declarations (picker) | custom/snacks.nvim |
-| `gI` | n | LSP implementations (picker) | custom/snacks.nvim - overlaps builtin `gri` |
-| `gy` | n | LSP type definitions (picker) | custom/snacks.nvim - overlaps builtin `grt` |
-| `gai` | n | Incoming calls (call hierarchy) | custom/snacks.nvim |
-| `gao` / `gaI` | n | Outgoing calls (call hierarchy) | custom/snacks.nvim|
-| `<leader>ss` | n | LSP document symbols | custom/snacks.nvim |
-| `<leader>sS` | n | LSP workspace symbols | custom/snacks.nvim |
-| `<leader>fmt` | n | `vim.lsp.buf.format()` — format buffer | custom/keymaps.lua |
-| `[d` / `]d` | n | Prev / next diagnostic | custom/keymaps.lua - shadows the 0.11 builtin pair |
-| `<leader>e` | n | `vim.diagnostic.open_float()` — line diagnostics popup | custom/keymaps.lua |
-| `<leader>q` | n | `vim.diagnostic.setloclist()` — buffer diagnostics to loclist | custom/keymaps.lua |
-| `<C-k>` / `<C-j>` | n | Quickfix next / prev (used to walk grep/LSP results) | custom/keymaps.lua |
-
-### Neovim 0.12 builtin LSP defaults (active whenever a server attaches — lua_ls, rust_analyzer, verible via mason [2](#29-1) )
-
-| Key | Mode | Action | Source |
-|---|---|---|---|
-| `K` | n | Hover documentation (`vim.lsp.buf.hover`) | nvim core default |
-| `grn` | n | Rename symbol | nvim core default |
-| `grr` | n | List references (builtin picker/quickfix) | nvim core default |
-| `gra` | n, v | Code actions | nvim core default |
-| `gri` | n | Go to implementation | nvim core default |
-| `grt` | n | Go to type definition | nvim core default |
-| `gO` | n | Document symbol outline | nvim core default |
-| `<C-s>` | i | Signature help | nvim core default |
-| `<C-x><C-o>` | i | Omnifunc completion (when `omnifunc` set by lspconfig) | nvim core default |
-
-## Duplication worth a README footnote
+| `gd` | n | LSP definitions (picker) | snacks.lua - overrides builtin local-declaration `gd` |
+| `gD` | n | LSP declarations (picker) | snacks.lua |
+| `gI` | n | LSP implementations (picker) | snacks.lua - overlaps builtin `gri` |
+| `gy` | n | LSP type definitions (picker) | snacks.lua - overlaps builtin `grt` |
+| `gai` | n | Incoming calls (call hierarchy) | snacks.lua |
+| `gao` / `gaI` | n | Outgoing calls (call hierarchy) | snacks.lua|
+| `<leader>ss` | n | LSP document symbols | snacks.lua |
+| `<leader>sS` | n | LSP workspace symbols | snacks.lua |
+| `<leader>fmt` | n | `vim.lsp.buf.format()` — format buffer | keymaps.lua |
+| `[d` / `]d` | n | Prev / next diagnostic | keymaps.lua - shadows the 0.11 builtin pair |
+| `<leader>e` | n | `vim.diagnostic.open_float()` — line diagnostics popup | keymaps.lua |
+| `<leader>q` | n | `vim.diagnostic.setloclist()` — buffer diagnostics to loclist | keymaps.lua |
+| `<C-k>` / `<C-j>` | n | Quickfix next / prev (used to walk grep/LSP results) | keymaps.lua |
+| `K` | n | Hover documentation (`vim.lsp.buf.hover`) | builtin |
+| `grn` | n | Rename symbol | builtin |
+| `grr` | n | List references (builtin picker/quickfix) | builtin |
+| `gra` | n, v | Code actions | builtin |
+| `gri` | n | Go to implementation | builtin |
+| `grt` | n | Go to type definition | builtin |
+| `gO` | n | Document symbol outline | builtin |
+| `<C-s>` | i | Signature help | builtin |
+| `<C-x><C-o>` | i | Omnifunc completion (when `omnifunc` set by lspconfig) | builtin |
 
 - `gr` (snacks) vs `grr` (builtin) — both "references", different UIs; same for `gI`/`gri` and `gy`/`grt`.
 - `gd` is fully shadowed: builtin `gd` = "goto local declaration", now unreachable.
-- `K` conflicts in visual mode: builtin `K` (keywordprg/hover) vs your `v`-mode `K` = move-selection-up in `keymaps.lua` — hover is unavailable while text is selected.
-- Diagnostic navigation: `[d`/`]d` are defined identically by core and your config; harmless.
-- No `on_attach`-style binds (`<leader>rn`, `<leader>ca`, `<leader>D`) exist in this config — renaming/actions go through `grn`/`gra` or snacks.
 
-Wiki pages you might want to explore:
-- [LSP, Mason and Linting (Koalemo/workspaceconfig)](/wiki/Koalemo/workspaceconfig#4.4.1)
-- [Neovim Configuration (Koalemo/workspaceconfig)](/wiki/Koalemo/workspaceconfig#4)
-
-### Citations
-
-**File:** config/nvim/lua/plugins/snacks.lua (L124-135)
-```lua
-    { "<leader>uC", function() Snacks.picker.colorschemes() end, desc = "Colorschemes" },
-    -- LSP
-    { "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition" },
-    { "gD", function() Snacks.picker.lsp_declarations() end, desc = "Goto Declaration" },
-    { "gr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References" },
-    { "gI", function() Snacks.picker.lsp_implementations() end, desc = "Goto Implementation" },
-    { "gy", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto T[y]pe Definition" },
-    { "gai", function() Snacks.picker.lsp_incoming_calls() end, desc = "C[a]lls Incoming" },
-    { "gao", function() Snacks.picker.lsp_outgoing_calls() end, desc = "C[a]lls Outgoing" },
-    { "<leader>ss", function() Snacks.picker.lsp_symbols() end, desc = "LSP Symbols" },
-    { "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
-    -- Other
-```
-
-**File:** config/nvim/lua/plugins/mason-lspconfig.lua (L1-15)
-```lua
-return {
-  "mason-org/mason-lspconfig.nvim",
-  opts = {
-    ensure_installed = {
-      "lua_ls",
-      "rust_analyzer",
-      "stylua",
-      "verible",
-    },
-  },
-  dependencies = {
-    { "mason-org/mason.nvim", opts = {} },
-    "neovim/nvim-lspconfig",
-  }
-}
-```
 
 ### snacks.nvim (`plugins/snacks.lua`)
 
@@ -315,7 +265,7 @@ return {
 | `<leader>/` / `<leader>sg` | Grep | custom |
 | `<leader>:` / `<leader>sc` | Command history | custom |
 | `<leader>sC` | Commands | custom |
-| `<leader>n` | Notification history (defined twice; notifier wins) | custom |
+| `<leader>no` | Notification history (defined twice; notifier wins) | custom |
 | `<leader>e` | File explorer (`explorer` module disabled — likely dead) | custom [4](#19-3)  |
 | `<leader>fc` | Find config file | custom |
 | `<leader>ff` / `<leader>fo` | Find files | custom |
@@ -345,7 +295,6 @@ return {
 | `<leader>un` | Dismiss notifications | custom |
 | `<leader>z` / `<leader>Z` | Zen / zoom | custom |
 | `<leader>.` / `<leader>S` | Scratch / select scratch | custom |
-| `<leader>bd` | `Snacks.bufdelete()` | custom |
 | `<leader>cR` | Rename file | custom |
 | `<leader>gB` | Git browse (n, v) | custom |
 | `<leader>gg` | Lazygit | custom |
@@ -368,7 +317,7 @@ return {
 
 | Key | Action | Source |
 |---|---|---|
-| `<leader>mt` | MundoToggle | custom [7](#19-6)  |
+| `<leader>mt` | MundoToggle | custom |
 | `<cr>` `o` `d` `p` `j`/`k` `q` etc. | Inside Mundo window: revert/diff/preview/navigate/quit | plugin default |
 
 ### nvim-surround (`plugins.lua`)
@@ -401,7 +350,7 @@ Empty `setup({})` → all defaults [8](#19-7) .
 | Key | Action | Source |
 |---|---|---|
 | `s` `u` `=` `dd` `dv` `dh` `cc` `q` (in `:G` buffer) | Stage/unstage/diff/commit/close | plugin default (buffer-local) |
-| `y<C-G>` | Yank object path | plugin default | [9](#19-8)
+| `y<C-G>` | Yank object path | plugin default |
 
 ### nerdy.nvim (`plugins.lua`)
 
@@ -417,243 +366,11 @@ Empty `setup({})` → all defaults [8](#19-7) .
 | `<leader>bt`| Toggle markdown rendering (buffer)| custom|
 
 
-## Known conflicts
-
-- `<leader>e`: diagnostic float (keymaps.lua) vs `Snacks.explorer` (disabled module anyway)
-- `<leader>bd`: `:bdelete!` (keymaps.lua) vs `Snacks.bufdelete()` (snacks.lua)
-- `<leader>n`: declared twice in snacks `keys` — notifier wins
-- `[d`/`]d`: your custom mappings override the 0.11 builtin defaults — same behavior anyway
-- gitgutter's `<leader>h*` shadowed if you add `<leader>h` binds later
-
-Wiki pages you might want to explore:
-- [Plugin Specifications (Koalemo/workspaceconfig)](/wiki/Koalemo/workspaceconfig#4.4)
-- [Neovim Configuration (Koalemo/workspaceconfig)](/wiki/Koalemo/workspaceconfig#4)
-
-### Citations
-
-**File:** config/nvim/lua/config/keymaps.lua (L1-1)
-```lua
-vim.g.mapleader = " "
-```
-
-**File:** config/nvim/lua/config/options.lua (L45-47)
-```lua
--- Don't lose selection when shifting sideways
-vim.keymap.set("x", "<", "<gv")
-vim.keymap.set("x", ">", ">gv")
-```
-
-**File:** config/nvim/lua/config/autocmds.lua (L10-22)
-```lua
-vim.api.nvim_create_autocmd('filetype', {
-  pattern = 'netrw',
-  desc = 'Better mappings for netrw',
-  callback = function()
-    local bind = function(lhs, rhs)
-      vim.keymap.set('n', lhs, rhs, {remap = true, buffer = true})
-    end
-
-    -- edit new file
-    bind('o', '<cr>')
-
-  end
-})
-```
-
-**File:** config/nvim/lua/plugins/snacks.lua (L13-13)
-```lua
-      explorer = { enabled = false },
-```
-
-**File:** config/nvim/lua/plugins/snacks.lua (L69-168)
-```lua
-  keys = {
-    -- Top Pickers & Explorer
-    { "<leader><space>", function() Snacks.picker.smart() end, desc = "Smart Find Files" },
-    { "<leader>,", function() Snacks.picker.buffers() end, desc = "Buffers" },
-    { "<leader>/", function() Snacks.picker.grep() end, desc = "Grep" },
-    { "<leader>:", function() Snacks.picker.command_history() end, desc = "Command History" },
-    { "<leader>n", function() Snacks.picker.notifications() end, desc = "Notification History" },
-    { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer" },
-    -- find
-    { "<leader>fb", function() Snacks.picker.buffers() end, desc = "Buffers" },
-    { "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Find Config File" },
-    { "<leader>ff", function() Snacks.picker.files() end, desc = "Find Files" },
-    { "<leader>fo", function() Snacks.picker.files() end, desc = "Find Files" },
-    { "<leader>fg", function() Snacks.picker.git_files() end, desc = "Find Git Files" },
-    { "<leader>fp", function() Snacks.picker.projects() end, desc = "Projects" },
-    { "<leader>fr", function() Snacks.picker.recent() end, desc = "Recent" },
-    -- git
-    { "<leader>gb", function() Snacks.picker.git_branches() end, desc = "Git Branches" },
-    { "<leader>gl", function() Snacks.picker.git_log() end, desc = "Git Log" },
-    { "<leader>gL", function() Snacks.picker.git_log_line() end, desc = "Git Log Line" },
-    { "<leader>gs", function() Snacks.picker.git_status() end, desc = "Git Status" },
-    { "<leader>gS", function() Snacks.picker.git_stash() end, desc = "Git Stash" },
-    { "<leader>gd", function() Snacks.picker.git_diff() end, desc = "Git Diff (Hunks)" },
-    { "<leader>gf", function() Snacks.picker.git_log_file() end, desc = "Git Log File" },
-    -- gh
-    { "<leader>gi", function() Snacks.picker.gh_issue() end, desc = "GitHub Issues (open)" },
-    { "<leader>gI", function() Snacks.picker.gh_issue({ state = "all" }) end, desc = "GitHub Issues (all)" },
-    { "<leader>gp", function() Snacks.picker.gh_pr() end, desc = "GitHub Pull Requests (open)" },
-    { "<leader>gP", function() Snacks.picker.gh_pr({ state = "all" }) end, desc = "GitHub Pull Requests (all)" },
-    -- Grep
-    { "<leader>sb", function() Snacks.picker.lines() end, desc = "Buffer Lines" },
-    { "<leader>sB", function() Snacks.picker.grep_buffers() end, desc = "Grep Open Buffers" },
-    { "<leader>sg", function() Snacks.picker.grep() end, desc = "Grep" },
-    { "<leader>sw", function() Snacks.picker.grep_word() end, desc = "Visual selection or word", mode = { "n", "x" } },
-    -- search
-    { '<leader>s"', function() Snacks.picker.registers() end, desc = "Registers" },
-    { '<leader>s/', function() Snacks.picker.search_history() end, desc = "Search History" },
-    { "<leader>sa", function() Snacks.picker.autocmds() end, desc = "Autocmds" },
-    { "<leader>sb", function() Snacks.picker.lines() end, desc = "Buffer Lines" },
-    { "<leader>sc", function() Snacks.picker.command_history() end, desc = "Command History" },
-    { "<leader>sC", function() Snacks.picker.commands() end, desc = "Commands" },
-    { "<leader>sd", function() Snacks.picker.diagnostics() end, desc = "Diagnostics" },
-    { "<leader>sD", function() Snacks.picker.diagnostics_buffer() end, desc = "Buffer Diagnostics" },
-    { "<leader>sh", function() Snacks.picker.help() end, desc = "Help Pages" },
-    { "<leader>sH", function() Snacks.picker.highlights() end, desc = "Highlights" },
-    { "<leader>si", function() Snacks.picker.icons() end, desc = "Icons" },
-    { "<leader>sj", function() Snacks.picker.jumps() end, desc = "Jumps" },
-    { "<leader>sk", function() Snacks.picker.keymaps() end, desc = "Keymaps" },
-    { "<leader>sl", function() Snacks.picker.loclist() end, desc = "Location List" },
-    { "<leader>sm", function() Snacks.picker.marks() end, desc = "Marks" },
-    { "<leader>sM", function() Snacks.picker.man() end, desc = "Man Pages" },
-    { "<leader>sp", function() Snacks.picker.lazy() end, desc = "Search for Plugin Spec" },
-    { "<leader>sq", function() Snacks.picker.qflist() end, desc = "Quickfix List" },
-    { "<leader>sR", function() Snacks.picker.resume() end, desc = "Resume" },
-    { "<leader>su", function() Snacks.picker.undo() end, desc = "Undo History" },
-    { "<leader>uC", function() Snacks.picker.colorschemes() end, desc = "Colorschemes" },
-    -- LSP
-    { "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition" },
-    { "gD", function() Snacks.picker.lsp_declarations() end, desc = "Goto Declaration" },
-    { "gr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References" },
-    { "gI", function() Snacks.picker.lsp_implementations() end, desc = "Goto Implementation" },
-    { "gy", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto T[y]pe Definition" },
-    { "gai", function() Snacks.picker.lsp_incoming_calls() end, desc = "C[a]lls Incoming" },
-    { "gao", function() Snacks.picker.lsp_outgoing_calls() end, desc = "C[a]lls Outgoing" },
-    { "<leader>ss", function() Snacks.picker.lsp_symbols() end, desc = "LSP Symbols" },
-    { "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
-    -- Other
-    { "<leader>z",  function() Snacks.zen() end, desc = "Toggle Zen Mode" },
-    { "<leader>Z",  function() Snacks.zen.zoom() end, desc = "Toggle Zoom" },
-    { "<leader>.",  function() Snacks.scratch() end, desc = "Toggle Scratch Buffer" },
-    { "<leader>S",  function() Snacks.scratch.select() end, desc = "Select Scratch Buffer" },
-    { "<leader>n",  function() Snacks.notifier.show_history() end, desc = "Notification History" },
-    { "<leader>bd", function() Snacks.bufdelete() end, desc = "Delete Buffer" },
-    { "<leader>cR", function() Snacks.rename.rename_file() end, desc = "Rename File" },
-    { "<leader>gB", function() Snacks.gitbrowse() end, desc = "Git Browse", mode = { "n", "v" } },
-    { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
-    { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss All Notifications" },
-    { "<c-/>",      function() Snacks.terminal() end, desc = "Toggle Terminal" },
-    { "<c-_>",      function() Snacks.terminal() end, desc = "which_key_ignore" },
-    { "]]",         function() Snacks.words.jump(vim.v.count1) end, desc = "Next Reference", mode = { "n", "t" } },
-    { "[[",         function() Snacks.words.jump(-vim.v.count1) end, desc = "Prev Reference", mode = { "n", "t" } },
-    {
-      "<leader>N",
-      desc = "Neovim News",
-      function()
-        Snacks.win({
-          file = vim.api.nvim_get_runtime_file("doc/news.txt", false)[1],
-          width = 0.6,
-          height = 0.6,
-          wo = {
-            spell = false,
-            wrap = false,
-            signcolumn = "yes",
-            statuscolumn = " ",
-            conceallevel = 3,
-          },
-        })
-      end,
-    }
-  },
-```
-
-**File:** config/nvim/lua/plugins/floaterm.lua (L1-10)
-```lua
-return { 'voldikss/vim-floaterm',
-  keys={
-    {"<leader>ftn", ":FloatermNew<cr>"},
-    {"<leader>ftk", ":FloatermKill<cr>"},
-    {"<leader>ftt", ":FloatermToggle<cr>"},
-    {"<leader>fh", ":FloatermPrev<cr>"},
-    {"<leader>fl", ":FloatermNext<cr>"},
-    {"<leader>fts", ":FloatermSend<cr>"},
-    {"<leader>ftv", ":'<.'>FloatermSend<cr>"},
-  },
-```
-
-**File:** config/nvim/lua/plugins/vim-mundo.lua (L3-5)
-```lua
-  keys = {
-	  {"<leader>mt", ':MundoToggle<cr>', desc="Mundo Toggle"},
-  },
-```
-
-**File:** config/nvim/lua/plugins/plugins.lua (L15-18)
-```lua
-  -- GitCommands
-  {
-    'tpope/vim-fugitive'
-  },
-```
-
-**File:** config/nvim/lua/plugins/plugins.lua (L69-78)
-```lua
-  {
-    "kylechui/nvim-surround",
-    version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features
-    event = "VeryLazy",
-    config = function()
-      require("nvim-surround").setup({
-        -- Configuration here, or leave empty to use defaults
-      })
-    end
-  },
-```
-
-**File:** config/nvim/lua/plugins/plugins.lua (L89-89)
-```lua
-      add_default_keybindings = true, -- Add default keybindings
-```
-
-**File:** config/nvim/lua/plugins/plugins.lua (L96-104)
-```lua
-  {
-    "iamcco/markdown-preview.nvim",
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    build = "cd app && yarn install",
-    init = function()
-      vim.g.mkdp_filetypes = { "markdown" }
-    end,
-    ft = { "markdown" },
-  },
-```
-
-**File:** config/nvim/lua/plugins/nvim-lint.lua (L33-40)
-```lua
-    vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-    callback = function()
-
-      -- try_lint without arguments runs the linters defined in `linters_by_ft`
-      -- for the current filetype
-      require("lint").try_lint()
-    end,
-    })
-```
-
-
-
-
-
-
-
 ## Layout
 
 ```
 bin/        # symlinked/wrapped binaries (on PATH)
 config/     # nvim, tmux, waybar, qutebrowser, fusesoc configs (XDG_CONFIG_HOME)
-envs/main/  # vendored python virtualenv
 sourceme/   # sourceme.sh + dbt-completion.sh
 MODULE      # pinned dependency manifest (dbt)
 DEPS/       # fetched dependencies (gitignored)
