@@ -377,13 +377,3 @@ DEPS/       # fetched dependencies (gitignored)
 BUILD/      # build output (gitignored)
 r``
 ```
-
-# Install
-
-```
-cd path/to/workdpaceconfig/
-./install.sh
-```
-
-Also, have a look into the file `install.sh` for manual installation instruction.
-
