@@ -21,7 +21,7 @@ vim.api.nvim_create_autocmd('FileType', {
   pattern = { 'systemverilog', 'verilog' },
   callback = function()
     vim.treesitter.start()                            -- Highlighting
-    vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()" -- Indentation
+    -- vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()" -- Indentation
   end,
 })
 
