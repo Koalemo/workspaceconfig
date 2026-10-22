@@ -126,7 +126,7 @@ Not provisioned by this repo — must exist on the system:
 |---|---|
 | `vim`, `vi`, `nvim` | `nvim` |
 | `vimdiff` | `nvim -d` |
-| `h` / `v` / `t` | `nvr -o` / `nvr -O` / `nvr --remote-tab` (only inside nvim terminal, when `$NVIM_LISTEN_ADDRESS` set) |
+| `h` / `v` / `t` | `nvr -o` / `nvr -O` / `nvr --remote-tab` |
 | `less` | `less -m -N -g -i -J --line-numbers --underline-special` |
 | `more` | `less` |
 | `tmux` | `tmux -f $CONFIGROOT/tmux/tmux.conf` |

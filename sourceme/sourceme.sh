@@ -113,11 +113,9 @@ alias vimdiff="nvim -d"
 export EDITOR=nvim
 
 #shortcuts to open files in new split / tab
-if [ -n "$NVIM_LISTEN_ADDRESS" ]; then
-  alias h='nvr -o'
-  alias v='nvr -O'
-  alias t='nvr --remote-tab'
-fi
+alias h='nvr -o'
+alias v='nvr -O'
+alias t='nvr --remote-tab'
 
 # Pipe Highlight to less
 export LESSOPEN="| $(which highlight) %s --out-format xterm256 --quiet --force --style solarized-light -D /scratch/msc20f1/highlight_data"
