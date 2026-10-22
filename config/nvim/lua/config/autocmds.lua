@@ -119,9 +119,9 @@ local function build_ns(scheme)
       vim.api.nvim_set_hl(full, name, r)
 
       local m = vim.tbl_extend("force", {}, r)
-      m.fg = mute_color(r.fg, 0.35)
+      m.fg = mute_color(r.fg, 0.55)
       m.bg = dim_color(r.bg, 0.55)
-      m.sp = mute_color(r.sp, 0.35)
+      m.sp = mute_color(r.sp, 0.55)
       m.bold, m.italic, m.underline = false, false, false
       vim.api.nvim_set_hl(muted, name, m)
     end
